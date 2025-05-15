@@ -29,7 +29,7 @@ With a focus on natural processing, no artificial additives, and eco-friendly pa
     "pan India spice supplier",
     "best quality pulses",
     "turmeric, cumin, red chili",
-    "Indian masala wholesaler",
+    "Millets Dry fruits Grains",
     "South Indian spices",
     "authentic Indian pulses",
   ],
@@ -68,6 +68,7 @@ export default function RootLayout({
         <meta name="author" content="Kanak Retail" />
         <meta name="copyright" content="Kanak Retail" />
         <meta name="theme-color" content="#7BC043" />
+        <link rel="icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
         <link rel="icon" type="image/png" sizes="192x192" href="/icons/android-chrome-192x192.png" />
@@ -90,6 +91,9 @@ export default function RootLayout({
         <meta name="twitter:title" content="Kanak Retail – Authentic Indian Spices & Pulses" />
         <meta name="twitter:description" content="Shop pure and flavorful spices & pulses with Kanak Retail. Now delivering across India. Taste the tradition with every ingredient." />
         <meta name="twitter:image" content="https://kanakretail.com/og-image.jpg" />
+        <meta name="contact:phone_number" content="+91-9876543210" />
+        <meta name="contact:email" content="info@kanakretail.com" />
+        <meta name="contact:address" content="Chennai, Tamil Nadu, India" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -101,16 +105,25 @@ export default function RootLayout({
               logo: "https://kanakretail.com/logo.png",
               sameAs: [
                 "https://www.facebook.com/kanakretail",
-                "https://www.instagram.com/kanakretail",
+                "https://www.instagram.com/kanakretail"
               ],
               description:
                 "Kanak Retail offers a wide selection of premium spices and pulses in South India. Quality you can trust.",
               address: {
                 "@type": "PostalAddress",
-                addressCountry: "IN",
-                addressRegion: "South India",
+                streetAddress: "123 Market Road",
+                addressLocality: "Chennai",
+                addressRegion: "Tamil Nadu",
+                postalCode: "600001",
+                addressCountry: "IN"
               },
-            }),
+              contactPoint: [{
+                "@type": "ContactPoint",
+                telephone: "+91-9876543210",
+                contactType: "customer service",
+                email: "info@kanakretail.com"
+              }]
+            })
           }}
         />
       </head>
