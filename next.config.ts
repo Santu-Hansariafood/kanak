@@ -1,7 +1,15 @@
-import type { NextConfig } from "next";
+import type { Config } from "tailwindcss";
 
-const nextConfig: NextConfig = {
-  /* config options here */
+const config: Config = {
+  content: ["./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      animation: {
+        "spin-slow": "spin 5s linear infinite",
+      },
+    },
+  },
+  plugins: [],
 };
 
-export default nextConfig;
+export default config;
