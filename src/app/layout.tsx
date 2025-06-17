@@ -22,16 +22,22 @@ Our mission is to bring the rich heritage of Indian cooking to your plate with c
 
 With a focus on natural processing, no artificial additives, and eco-friendly packaging, Kanak Retail stands for health, tradition, and flavor. Join thousands of happy customers who trust Kanak Retail for their daily cooking essentials. Discover the real taste of India – one spice at a time.`,
   keywords: [
-    "Kanak",
     "Kanak Retail",
-    "Indian spices online",
-    "buy spices India",
-    "pan India spice supplier",
-    "best quality pulses",
-    "turmeric, cumin, red chili",
-    "Millets Dry fruits Grains",
-    "South Indian spices",
-    "authentic Indian pulses",
+    "buy Indian spices online",
+    "authentic Indian pulses supplier",
+    "natural turmeric powder India",
+    "pure cumin seeds online",
+    "hygienic red chili powder",
+    "premium garam masala blend",
+    "moong dal online India",
+    "eco-friendly spice packaging",
+    "best Indian masalas South India",
+    "spices home delivery India",
+    "pulses wholesale online India",
+    "pan India spice delivery",
+    "traditional Indian cooking ingredients",
+    "Chennai spice supplier online",
+    "pure like gold spices",
   ],
   openGraph: {
     title: "Kanak Retail – Authentic Indian Spices & Pulses",
@@ -75,7 +81,18 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="512x512" href="/icons/android-chrome-512x512.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
         <link rel="manifest" href="/icons/site.webmanifest" />
-        {/* Open Graph Meta Tags */}
+        <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#7BC043" />
+        <meta name="msapplication-TileColor" content="#7BC043" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@kanakretail" />
+        <meta name="twitter:title" content="Kanak Retail – Authentic Indian Spices & Pulses" />
+        <meta name="twitter:description" content="Shop pure and flavorful spices & pulses with Kanak Retail. Now delivering across India. Taste the tradition with every ingredient." />
+        <meta name="twitter:image" content="https://kanakretail.com/og-image.jpg" />
+        <meta name="contact:phone_number" content="+91-9876543210" />
+        <meta name="contact:email" content="info@kanakretail.com" />
+        <meta name="contact:address" content="Chennai, Tamil Nadu, India" />
+        
+        {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Kanak Retail – Authentic Indian Spices & Pulses" />
         <meta property="og:description" content="Shop pure and flavorful spices & pulses with Kanak Retail. Now delivering across India. Taste the tradition with every ingredient." />
@@ -86,50 +103,85 @@ export default function RootLayout({
         <meta property="og:image:height" content="630" />
         <meta property="og:image:type" content="image/jpeg" />
         <meta property="og:image:alt" content="Kanak Retail – Authentic Spices and Pulses" />
-        {/* Twitter Card Meta Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Kanak Retail – Authentic Indian Spices & Pulses" />
-        <meta name="twitter:description" content="Shop pure and flavorful spices & pulses with Kanak Retail. Now delivering across India. Taste the tradition with every ingredient." />
-        <meta name="twitter:image" content="https://kanakretail.com/og-image.jpg" />
-        <meta name="contact:phone_number" content="+91-9876543210" />
-        <meta name="contact:email" content="info@kanakretail.com" />
-        <meta name="contact:address" content="Chennai, Tamil Nadu, India" />
+
+        {/* Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Organization",
-              name: "Kanak Retail",
-              url: "https://kanakretail.com",
-              logo: "https://kanakretail.com/logo.png",
-              sameAs: [
-                "https://www.facebook.com/kanakretail",
-                "https://www.instagram.com/kanakretail"
-              ],
-              description:
-                "Kanak Retail offers a wide selection of premium spices and pulses in South India. Quality you can trust.",
-              address: {
-                "@type": "PostalAddress",
-                streetAddress: "123 Market Road",
-                addressLocality: "Chennai",
-                addressRegion: "Tamil Nadu",
-                postalCode: "600001",
-                addressCountry: "IN"
-              },
-              contactPoint: [{
-                "@type": "ContactPoint",
-                telephone: "+91-9876543210",
-                contactType: "customer service",
-                email: "info@kanakretail.com"
-              }]
-            })
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  name: "Kanak Retail",
+                  url: "https://kanakretail.com",
+                  logo: "https://kanakretail.com/logo.png",
+                  sameAs: [
+                    "https://www.facebook.com/kanakretail",
+                    "https://www.instagram.com/kanakretail"
+                  ],
+                  description:
+                    "Kanak Retail offers a wide selection of premium spices and pulses in South India. Quality you can trust. Pure like gold.",
+                  address: {
+                    "@type": "PostalAddress",
+                    streetAddress: "123 Market Road",
+                    addressLocality: "Chennai",
+                    addressRegion: "Tamil Nadu",
+                    postalCode: "600001",
+                    addressCountry: "IN"
+                  },
+                  contactPoint: [
+                    {
+                      "@type": "ContactPoint",
+                      telephone: "+91-9876543210",
+                      contactType: "customer service",
+                      email: "purchase@kanakretail.com"
+                    }
+                  ]
+                },
+                {
+                  "@type": "Product",
+                  name: "Ragi",
+                  image: "https://kanakretail.com/images/ragi.jpg",
+                  description: "Pure like gold turmeric powder from South India.",
+                  brand: {
+                    "@type": "Brand",
+                    name: "Kanak Retail"
+                  }
+                },
+                {
+                  "@type": "Product",
+                  name: "Moong Dal",
+                  image: "https://kanakretail.com/images/rice.jpg",
+                  description: "Handpicked moong dal – clean, fresh, and perfect for Indian cooking.",
+                  brand: {
+                    "@type": "Brand",
+                    name: "Kanak Retail"
+                  }
+                },
+                {
+                  "@type": "BreadcrumbList",
+                  "itemListElement": [
+                    {
+                      "@type": "ListItem",
+                      "position": 1,
+                      "name": "Home",
+                      "item": "https://kanakretail.com"
+                    },
+                    {
+                      "@type": "ListItem",
+                      "position": 2,
+                      "name": "Products",
+                      "item": "https://kanakretail.com/home"
+                    }
+                  ]
+                }
+              ]
+            }),
           }}
         />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
     </html>
