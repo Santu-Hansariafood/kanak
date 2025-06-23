@@ -20,12 +20,12 @@ export default function ContactInfo() {
       >
         <span className="text-2xl">📞</span>
         <span className="font-bold text-gray-700">Phone:</span>
-        <a href="tel:+919876543210" className="underline underline-offset-2 text-green-700 font-semibold hover:text-green-900 transition-colors">
-          +91 98765 43210
+        <a href="tel:+919830433535" className="underline underline-offset-2 text-green-700 font-semibold hover:text-green-900 transition-colors">
+          +91 98304 33535
         </a>
         <span className="hidden sm:inline text-gray-400">|</span>
-        <a href="tel:+919812345678" className="underline underline-offset-2 text-green-700 font-semibold hover:text-green-900 transition-colors">
-          +91 98123 45678
+        <a href="tel:+919445501234" className="underline underline-offset-2 text-green-700 font-semibold hover:text-green-900 transition-colors">
+          +91 94455 01234
         </a>
       </motion.div>
 
