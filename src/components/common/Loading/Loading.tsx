@@ -13,7 +13,7 @@ const Loading: React.FC = () => {
           className="w-32 h-32 animate-spin-slow drop-shadow-lg rounded-full"
         />
         <p className="mt-6 text-xl font-semibold text-green-900 animate-pulse">
-          Loading KANAK Dashboard...
+          Loading KANAK...
         </p>
       </div>
     </div>
