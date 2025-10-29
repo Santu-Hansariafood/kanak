@@ -1,0 +1,41 @@
+{
+  "company_name": "ভিটার",
+  "tagline": "উদ্ভাবনী প্রযুক্তি সমাধানের মাধ্যমে ব্যবসা রূপান্তর।",
+  "email": "hello@vitara.com",
+  "phone": "+১ (৫৫৫) ১২৩-৪৫৬৭",
+  "address": "নিউ ইয়র্ক, যুক্তরাষ্ট্র",
+  
+  "company": "কোম্পানি",
+  "about_us": "আমাদের সম্পর্কে",
+  "our_team": "আমাদের দল",
+  "careers": "ক্যারিয়ার",
+  "press": "প্রেস",
+
+  "services": "সেবা",
+  "our_services": "আমাদের সেবা",
+  "web_dev": "ওয়েব ডেভেলপমেন্ট",
+  "mobile_apps": "মোবাইল অ্যাপস",
+  "cloud_services": "ক্লাউড সার্ভিসেস",
+  "consulting": "পরামর্শ",
+
+  "resources": "রিসোর্স",
+  "blog": "ব্লগ",
+  "documentation": "ডকুমেন্টেশন",
+  "support": "সহায়তা",
+  "contact": "যোগাযোগ",
+
+  "legal": "আইনি",
+  "legal_info": "আইনি তথ্য",
+  "privacy_policy": "গোপনীয়তা নীতি",
+  "terms_of_service": "পরিষেবার শর্তাবলী",
+  "cookie_policy": "কুকি নীতি",
+  "gdpr": "জিডিপিআর",
+
+  "social_facebook": "ফেসবুক",
+  "social_twitter": "টুইটার",
+  "social_linkedin": "লিংকডইন",
+  "social_instagram": "ইনস্টাগ্রাম",
+
+  "scroll_top": "উপরে যান",
+  "copyright": "সমস্ত অধিকার সংরক্ষিত।"
+}

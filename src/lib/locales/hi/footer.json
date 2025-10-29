@@ -1,0 +1,41 @@
+{
+  "company_name": "विटारा",
+  "tagline": "नवोन्मेषी तकनीकी समाधानों के माध्यम से व्यवसायों को रूपांतरित करना।",
+  "email": "hello@vitara.com",
+  "phone": "+१ (५५५) १२३-४५६७",
+  "address": "नई दिल्ली, भारत",
+  
+  "company": "कंपनी",
+  "about_us": "हमारे बारे में",
+  "our_team": "हमारी टीम",
+  "careers": "करियर",
+  "press": "प्रेस",
+
+  "services": "सेवाएं",
+  "our_services": "हमारी सेवाएं",
+  "web_dev": "वेब विकास",
+  "mobile_apps": "मोबाइल ऐप्स",
+  "cloud_services": "क्लाउड सेवाएं",
+  "consulting": "परामर्श",
+
+  "resources": "संसाधन",
+  "blog": "ब्लॉग",
+  "documentation": "दस्तावेज़",
+  "support": "सहायता",
+  "contact": "संपर्क करें",
+
+  "legal": "कानूनी",
+  "legal_info": "कानूनी जानकारी",
+  "privacy_policy": "गोपनीयता नीति",
+  "terms_of_service": "सेवा की शर्तें",
+  "cookie_policy": "कुकी नीति",
+  "gdpr": "जीडीपीआर",
+
+  "social_facebook": "फेसबुक",
+  "social_twitter": "ट्विटर",
+  "social_linkedin": "लिंक्डइन",
+  "social_instagram": "इंस्टाग्राम",
+
+  "scroll_top": "ऊपर जाएं",
+  "copyright": "सभी अधिकार सुरक्षित।"
+}

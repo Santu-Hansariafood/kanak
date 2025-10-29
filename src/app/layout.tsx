@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import dynamic from "next/dynamic";
+const Header = dynamic(() => import("@/components/common/Header/Header"));
+const Footer = dynamic(() => import("@/components/common/Footer/Footer"));
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,7 +19,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Kanak Retail – Authentic Indian Spices & Pulses",
-  description: `Kanak Retail is your trusted source for premium Indian spices and pulses, delivering quality, purity, and tradition across India.`,
+  description:
+    "Kanak Retail is your trusted source for premium Indian spices and pulses, delivering quality, purity, and tradition across India.",
   keywords: [
     "Kanak Retail",
     "buy Indian spices online",
@@ -32,7 +36,8 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://kanakretail.com"),
   openGraph: {
     title: "Kanak Retail – Authentic Indian Spices & Pulses",
-    description: "Shop pure and flavorful spices & pulses with Kanak Retail. Now delivering across India.",
+    description:
+      "Shop pure and flavorful spices & pulses with Kanak Retail. Now delivering across India.",
     url: "https://kanakretail.com",
     siteName: "Kanak Retail",
     images: [
@@ -50,18 +55,22 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@kanakretail",
     title: "Kanak Retail – Authentic Indian Spices & Pulses",
-    description: "Shop pure and flavorful spices & pulses with Kanak Retail. Now delivering across India.",
+    description:
+      "Shop pure and flavorful spices & pulses with Kanak Retail. Now delivering across India.",
     images: ["https://kanakretail.com/og-image.jpg"],
   },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
+  // ✅ Don't directly use `i18n` (client-side only)
+  // We’ll default to 'en' for SSR, and the client will update language automatically.
+
   return (
-    <html lang="en" prefix="og: http://ogp.me/ns#">
+    <html lang="en">
       <head>
         <link rel="canonical" href="https://kanakretail.com" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -70,16 +79,43 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
         <link rel="manifest" href="/icons/site.webmanifest" />
         <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
-        <link rel="icon" type="image/png" sizes="192x192" href="/icons/android-chrome-192x192.png" />
-        <link rel="icon" type="image/png" sizes="512x512" href="/icons/android-chrome-512x512.png" />
-        <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#7BC043" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/icons/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/icons/favicon-16x16.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="192x192"
+          href="/icons/android-chrome-192x192.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="512x512"
+          href="/icons/android-chrome-512x512.png"
+        />
+        <link
+          rel="mask-icon"
+          href="/icons/safari-pinned-tab.svg"
+          color="#7BC043"
+        />
         <meta name="msapplication-TileColor" content="#7BC043" />
         <meta name="author" content="Kanak Retail" />
-        <meta name="google-site-verification" content="zSN38N5ZBdA-BFgIKoh1_J3nQvv6yep7pwZLh1Slkyc" />
+        <meta
+          name="google-site-verification"
+          content="zSN38N5ZBdA-BFgIKoh1_J3nQvv6yep7pwZLh1Slkyc"
+        />
 
-        {/* Structured Data */}
+        {/* 🧠 Structured Data (SEO Rich Snippets) */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -95,7 +131,8 @@ export default function RootLayout({
                     "https://www.facebook.com/kanakretail",
                     "https://www.instagram.com/kanakretail",
                   ],
-                  description: "Kanak Retail offers premium spices and pulses from South India.",
+                  description:
+                    "Kanak Retail offers premium spices and pulses from South India.",
                   address: {
                     "@type": "PostalAddress",
                     streetAddress: "123 Market Road",
@@ -115,21 +152,17 @@ export default function RootLayout({
                   "@type": "Product",
                   name: "Ragi",
                   image: "https://kanakretail.com/images/ragi.jpg",
-                  description: "Pure like gold turmeric powder from South India.",
-                  brand: {
-                    "@type": "Brand",
-                    name: "Kanak Retail",
-                  },
+                  description:
+                    "Pure like gold turmeric powder from South India.",
+                  brand: { "@type": "Brand", name: "Kanak Retail" },
                 },
                 {
                   "@type": "Product",
                   name: "Moong Dal",
                   image: "https://kanakretail.com/images/rice.jpg",
-                  description: "Handpicked moong dal – clean, fresh, and perfect for Indian cooking.",
-                  brand: {
-                    "@type": "Brand",
-                    name: "Kanak Retail",
-                  },
+                  description:
+                    "Handpicked moong dal – clean, fresh, and perfect for Indian cooking.",
+                  brand: { "@type": "Brand", name: "Kanak Retail" },
                 },
                 {
                   "@type": "BreadcrumbList",
@@ -153,8 +186,13 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {children}
+
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        <Header />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

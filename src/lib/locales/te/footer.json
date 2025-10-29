@@ -1,0 +1,41 @@
+{
+  "company_name": "విటారా",
+  "tagline": "నవీన సాంకేతిక పరిష్కారాల ద్వారా వ్యాపారాలను మార్చడం.",
+  "email": "hello@vitara.com",
+  "phone": "+1 (555) 123-4567",
+  "address": "హైదరాబాద్, భారతదేశం",
+  
+  "company": "కంపెనీ",
+  "about_us": "మా గురించి",
+  "our_team": "మా బృందం",
+  "careers": "ఉద్యోగాలు",
+  "press": "ప్రెస్",
+
+  "services": "సేవలు",
+  "our_services": "మా సేవలు",
+  "web_dev": "వెబ్ డెవలప్‌మెంట్",
+  "mobile_apps": "మొబైల్ యాప్స్",
+  "cloud_services": "క్లౌడ్ సేవలు",
+  "consulting": "కన్సల్టింగ్",
+
+  "resources": "వనరులు",
+  "blog": "బ్లాగ్",
+  "documentation": "డాక్యుమెంటేషన్",
+  "support": "మద్దతు",
+  "contact": "సంప్రదించండి",
+
+  "legal": "న్యాయ",
+  "legal_info": "న్యాయ సమాచారం",
+  "privacy_policy": "గోప్యతా విధానం",
+  "terms_of_service": "సేవా నిబంధనలు",
+  "cookie_policy": "కుకీ విధానం",
+  "gdpr": "జిడిపిఆర్",
+
+  "social_facebook": "ఫేస్‌బుక్",
+  "social_twitter": "ట్విట్టర్",
+  "social_linkedin": "లింక్డ్‌ఇన్",
+  "social_instagram": "ఇన్‌స్టాగ్రామ్",
+
+  "scroll_top": "పైకి వెళ్ళండి",
+  "copyright": "అన్ని హక్కులుสง్రక్షించబడ్డాయి."
+}

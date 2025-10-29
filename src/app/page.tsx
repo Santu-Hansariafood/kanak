@@ -1,13 +1,8 @@
-import dynamic from 'next/dynamic'
-import React, { Suspense } from 'react'
-import Loading from '@/components/common/Loading/Loading';
-const WelcomeSection = dynamic(()=> import('@/components/ui/WelcomeSection/WelcomeSection'));
+import React from 'react'
 
 const page = () => {
   return (
-    <Suspense fallback={<Loading/>}>
-    <WelcomeSection/>
-    </Suspense>
+    <div>page</div>
   )
 }
 

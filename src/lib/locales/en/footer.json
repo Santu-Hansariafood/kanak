@@ -1,0 +1,41 @@
+{
+  "company_name": "VITARA",
+  "tagline": "Transforming businesses through innovative technology solutions.",
+  "email": "hello@vitara.com",
+  "phone": "+1 (555) 123-4567",
+  "address": "New York, NY",
+  
+  "company": "Company",
+  "about_us": "About Us",
+  "our_team": "Our Team",
+  "careers": "Careers",
+  "press": "Press",
+
+  "services": "Services",
+  "our_services": "Our Services",
+  "web_dev": "Web Development",
+  "mobile_apps": "Mobile Apps",
+  "cloud_services": "Cloud Services",
+  "consulting": "Consulting",
+
+  "resources": "Resources",
+  "blog": "Blog",
+  "documentation": "Documentation",
+  "support": "Support",
+  "contact": "Contact",
+
+  "legal": "Legal",
+  "legal_info": "Legal Information",
+  "privacy_policy": "Privacy Policy",
+  "terms_of_service": "Terms of Service",
+  "cookie_policy": "Cookie Policy",
+  "gdpr": "GDPR",
+
+  "social_facebook": "Facebook",
+  "social_twitter": "Twitter",
+  "social_linkedin": "LinkedIn",
+  "social_instagram": "Instagram",
+
+  "scroll_top": "Scroll to top",
+  "copyright": "All rights reserved."
+}
