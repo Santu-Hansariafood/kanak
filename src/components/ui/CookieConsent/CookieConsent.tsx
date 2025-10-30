@@ -1,11 +1,12 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+import "@/lib/i18n/client";
 import { motion, AnimatePresence } from 'framer-motion';
 import { Cookie, X, Check } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const CookieConsent = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation("cookie");
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {

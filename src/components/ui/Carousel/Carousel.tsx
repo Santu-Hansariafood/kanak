@@ -1,11 +1,12 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+import "@/lib/i18n/client";
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const Carousel = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation("carousel");
   const [currentSlide, setCurrentSlide] = useState(0);
 
   // ✅ Load slides from i18next (supports multilingual)

@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import "@/lib/i18n/client";
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { ArrowRight, Star, Users, Globe, Award } from 'lucide-react';
@@ -8,7 +9,7 @@ import Carousel from "@/components/ui/Carousel/Carousel";
 import CookieConsent from '@/components/ui/CookieConsent/CookieConsent';
 
 const Home = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation("home");
 
   const features = t('home.features', { returnObjects: true }) as {
     icon: string;
