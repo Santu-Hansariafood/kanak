@@ -6,9 +6,9 @@ import { Calendar, User, ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const Blog = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation("blog");
 
-  const blogPosts = t("blog.posts", { returnObjects: true }) as Array<{
+  const blogPosts = t("posts", { returnObjects: true }) as Array<{
     title: string;
     excerpt: string;
     author: string;
@@ -33,10 +33,10 @@ const Blog = () => {
             className="text-center mb-16"
           >
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              {t("blog.title")}
+              {t("title")}
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {t("blog.subtitle")}
+              {t("subtitle")}
             </p>
           </motion.div>
 
@@ -56,7 +56,7 @@ const Blog = () => {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute top-4 left-4 bg-gradient-to-r from-teal-600 to-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      {t("blog.featured")}
+                      {t("featured")}
                     </div>
                   </div>
 
@@ -97,7 +97,7 @@ const Blog = () => {
                         whileHover={{ scale: 1.05 }}
                         className="flex items-center space-x-2 text-teal-600 font-semibold hover:text-teal-700 transition-colors"
                       >
-                        <span>{t("blog.readMore")}</span>
+                        <span>{t("readMore")}</span>
                         <ArrowRight className="w-4 h-4" />
                       </motion.button>
                     </div>
@@ -154,7 +154,7 @@ const Blog = () => {
                       whileHover={{ scale: 1.05 }}
                       className="flex items-center space-x-1 text-teal-600 font-semibold hover:text-teal-700 transition-colors"
                     >
-                      <span>{t("blog.read")}</span>
+                      <span>{t("read")}</span>
                       <ArrowRight className="w-4 h-4" />
                     </motion.button>
                   </div>
