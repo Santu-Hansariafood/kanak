@@ -38,14 +38,11 @@ const CookieConsent = () => {
         >
           <div className="bg-white/90 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-200/50 p-6">
             <div className="flex items-start space-x-4">
-              {/* Cookie Icon */}
               <div className="flex-shrink-0">
                 <div className="w-12 h-12 bg-gradient-to-r from-teal-600 to-cyan-500 rounded-xl flex items-center justify-center">
                   <Cookie className="w-6 h-6 text-white" />
                 </div>
               </div>
-
-              {/* Text & Actions */}
               <div className="flex-1">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   {t('cookie.title', 'Cookie Preferences')}
@@ -56,8 +53,6 @@ const CookieConsent = () => {
                     'We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.'
                   )}
                 </p>
-
-                {/* Action Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3">
                   <motion.button
                     whileHover={{ scale: 1.02 }}

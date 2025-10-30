@@ -9,7 +9,6 @@ const Carousel = () => {
   const { t } = useTranslation("carousel");
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // ✅ Load slides from i18next (supports multilingual)
   const slides = t('carousel.slides', { returnObjects: true }) as {
     title: string;
     subtitle: string;
@@ -17,7 +16,6 @@ const Carousel = () => {
     cta: string;
   }[];
 
-  // ✅ Fallback data (in case translation JSON is missing)
   const defaultSlides = [
     {
       title: 'Innovation Meets Excellence',
@@ -46,7 +44,6 @@ const Carousel = () => {
 
   const slidesToUse = Array.isArray(slides) && slides.length > 0 ? slides : defaultSlides;
 
-  // ✅ Auto-slide timer
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slidesToUse.length);
@@ -84,7 +81,6 @@ const Carousel = () => {
         </motion.div>
       </AnimatePresence>
 
-      {/* Content Overlay */}
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="text-center text-white px-4 max-w-4xl">
           <motion.h1
@@ -120,8 +116,6 @@ const Carousel = () => {
           </motion.button>
         </div>
       </div>
-
-      {/* Controls */}
       <button
         onClick={prevSlide}
         className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-md text-white p-3 rounded-full hover:bg-white/40 hover:scale-110 transition-all duration-300 shadow-lg"
@@ -135,8 +129,6 @@ const Carousel = () => {
       >
         <ChevronRight className="w-6 h-6" />
       </button>
-
-      {/* Dots */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-3">
         {slidesToUse.map((_, index) => (
           <button

@@ -4,8 +4,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Linkedin, Twitter, Mail } from "lucide-react";
 import { useTranslation } from "react-i18next";
-
-// Define TypeScript type for each team member
 interface TeamMember {
   name: string;
   role: string;
@@ -19,7 +17,7 @@ interface TeamMember {
 }
 
 const Teams: React.FC = () => {
-  const { t } = useTranslation("teams"); // use 'teams' namespace
+  const { t } = useTranslation("teams");
 
   const teamMembers: TeamMember[] = [
     {
@@ -76,7 +74,6 @@ const Teams: React.FC = () => {
     <div className="pt-16">
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          {/* Page Header */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -90,8 +87,6 @@ const Teams: React.FC = () => {
               {t("subtitle")}
             </p>
           </motion.div>
-
-          {/* Team Members Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
               <motion.div

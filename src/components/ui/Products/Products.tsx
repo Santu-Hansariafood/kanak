@@ -7,8 +7,6 @@ import { useTranslation } from "react-i18next";
 
 const Products = () => {
   const { t } = useTranslation("products");
-
-  // ✅ Define products INSIDE component (so `t()` works)
   const products = [
     {
       icon: Smartphone,
@@ -58,7 +56,6 @@ const Products = () => {
     <div className="pt-16">
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          {/* Title Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -72,8 +69,6 @@ const Products = () => {
               {t("subtitle")}
             </p>
           </motion.div>
-
-          {/* Product Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((product, index) => (
               <motion.div
@@ -83,20 +78,15 @@ const Products = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-gray-200/50 hover:shadow-xl transition-all duration-300 group"
               >
-                {/* Icon */}
                 <div className="w-16 h-16 bg-gradient-to-r from-teal-600 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <product.icon className="w-8 h-8 text-white" />
                 </div>
-
-                {/* Product Info */}
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   {product.title}
                 </h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   {product.description}
                 </p>
-
-                {/* Features */}
                 <div className="mb-6">
                   <h4 className="font-semibold text-gray-900 mb-3">
                     {t("keyFeatures")}
@@ -113,8 +103,6 @@ const Products = () => {
 </ul>
 
                 </div>
-
-                {/* Price & Button */}
                 <div className="border-t border-gray-200 pt-6">
                   <p className="text-lg font-semibold text-teal-600 mb-4">
                     {product.price}

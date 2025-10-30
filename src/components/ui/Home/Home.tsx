@@ -16,16 +16,12 @@ const Home = () => {
     title: string;
     desc: string;
   }[];
-
-  // ✅ Define icon mapping
   const icons: Record<string, React.ElementType> = {
     Star,
     Users,
     Globe,
     Award,
   };
-
-  // ✅ Fallback if translations are missing
   const fallbackFeatures = [
     { icon: 'Star', title: 'Excellence', desc: 'Delivering top-quality solutions that exceed expectations' },
     { icon: 'Users', title: 'Expert Team', desc: 'Skilled professionals dedicated to your success' },
@@ -37,10 +33,7 @@ const Home = () => {
 
   return (
     <div className="overflow-hidden relative">
-      {/* Hero Carousel */}
       <Carousel />
-
-      {/* Why Choose Us Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -79,8 +72,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      {/* Call to Action */}
       <section className="py-20 px-4 bg-gradient-to-r from-teal-600 to-cyan-500">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
@@ -105,8 +96,6 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
-
-      {/* Cookie Consent */}
       <CookieConsent />
     </div>
   );
