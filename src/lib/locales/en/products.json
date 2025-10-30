@@ -1,0 +1,42 @@
+{
+  "title": "Our Products",
+  "subtitle": "Explore our innovative digital solutions tailored for you.",
+  "keyFeatures": "Key Features",
+  "learnMore": "Learn More",
+  "mobile": {
+    "title": "Mobile App Development",
+    "description": "Crafting seamless mobile experiences for iOS and Android.",
+    "features": ["Cross-platform", "Fast performance", "Modern UI/UX"],
+    "price": "Starting at $999"
+  },
+  "web": {
+    "title": "Web Development",
+    "description": "Building responsive, high-performing websites.",
+    "features": ["Next.js & React", "SEO Optimized", "Scalable backend"],
+    "price": "Starting at $799"
+  },
+  "cloud": {
+    "title": "Cloud Solutions",
+    "description": "Reliable cloud infrastructure for your business.",
+    "features": ["AWS / Azure", "99.9% uptime", "Auto scaling"],
+    "price": "Starting at $499"
+  },
+  "security": {
+    "title": "Security Services",
+    "description": "Protect your applications with advanced security systems.",
+    "features": ["Encryption", "Vulnerability scanning", "Threat detection"],
+    "price": "Starting at $299"
+  },
+  "performance": {
+    "title": "Performance Optimization",
+    "description": "Make your app lightning fast with our performance tuning.",
+    "features": ["Load testing", "CDN setup", "Code optimization"],
+    "price": "Starting at $399"
+  },
+  "ai": {
+    "title": "AI & Automation",
+    "description": "Integrate intelligent automation into your workflows.",
+    "features": ["Chatbots", "Predictive analytics", "ML integration"],
+    "price": "Starting at $1199"
+  }
+}

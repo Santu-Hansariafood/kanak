@@ -29,6 +29,11 @@ import hiLocations from "../locales/hi/locations.json";
 import taLocations from "../locales/ta/locations.json";
 import bnLocations from "../locales/bn/locations.json";
 import teLocations from "../locales/te/locations.json";
+import enProducts from "../locales/en/products.json";
+import hiProducts from "../locales/hi/products.json";
+import taProducts from "../locales/ta/products.json";
+import bnProducts from "../locales/bn/products.json";
+import teProducts from "../locales/te/products.json";
 
 const resources = {
   en: {
@@ -37,6 +42,7 @@ const resources = {
     about: enAbout,
     teams: enTeams,
     locations: enLocations,
+    products: enProducts,
   },
   hi: {
     header: hiHeader,
@@ -44,6 +50,7 @@ const resources = {
     about: hiAbout,
     teams: hiTeams,
     locations: hiLocations,
+    products: hiProducts,
   },
   ta: {
     header: taHeader,
@@ -51,6 +58,7 @@ const resources = {
     about: taAbout,
     teams: taTeams,
     locations: taLocations,
+    products: taProducts,
   },
   bn: {
     header: bnHeader,
@@ -58,6 +66,7 @@ const resources = {
     about: bnAbout,
     teams: bnTeams,
     locations: bnLocations,
+    products: bnProducts,
   },
   te: {
     header: teHeader,
@@ -65,6 +74,7 @@ const resources = {
     about: teAbout,
     teams: teTeams,
     locations: teLocations,
+    products: teProducts,
   },
 };
 
@@ -81,7 +91,7 @@ if (!i18n.isInitialized) {
         order: ["localStorage", "navigator", "htmlTag"],
         caches: ["localStorage"],
       },
-      ns: ["header", "footer", "about", "teams", "locations"],
+      ns: ["header", "footer", "about", "teams", "locations", "products"],
       defaultNS: "header",
       react: { useSuspense: false },
     });
