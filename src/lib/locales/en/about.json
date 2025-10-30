@@ -1,0 +1,29 @@
+{
+  "about": {
+    "title": "About Vitara",
+    "subtitle": "We are passionate about innovation, technology, and building solutions that empower people and businesses.",
+    "story": {
+      "title": "Our Story",
+      "paragraph1": "Vitara started with a simple idea — to bridge the gap between technology and people through creativity and purpose.",
+      "paragraph2": "Today, we continue to push boundaries, crafting digital products that make a real impact in everyday life."
+    },
+    "values": {
+      "mission": {
+        "title": "Our Mission",
+        "desc": "To inspire progress through meaningful innovation."
+      },
+      "vision": {
+        "title": "Our Vision",
+        "desc": "To be a global leader in delivering transformative digital experiences."
+      },
+      "passion": {
+        "title": "Our Passion",
+        "desc": "We love what we do and pour creativity into every project."
+      },
+      "innovation": {
+        "title": "Our Innovation",
+        "desc": "We embrace change and continuously evolve with new ideas."
+      }
+    }
+  }
+}

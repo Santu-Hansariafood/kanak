@@ -14,17 +14,16 @@ const Header = () => {
   const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
 
-  // ✅ Prevent hydration mismatch by waiting until the component is mounted
   useEffect(() => {
     setMounted(true);
   }, []);
 
   const languages = [
-    { code: "en", name: "English", flag: "🇬🇧" },
-    { code: "hi", name: "हिन्दी", flag: "HI" },
-    { code: "ta", name: "தமிழ்", flag: "TA" },
-    { code: "bn", name: "বাংলা", flag: "BN" },
-    { code: "te", name: "తెలుగు", flag: "🇮🇳" },
+    { code: "en", name: "English"},
+    { code: "hi", name: "हिन्दी" },
+    { code: "ta", name: "தமிழ்"},
+    { code: "bn", name: "বাংলা" },
+    { code: "te", name: "తెలుగు"},
   ];
 
   const currentLanguage =
@@ -47,14 +46,12 @@ const Header = () => {
     { name: t("nav.blog"), path: "/blog" },
   ];
 
-  // ✅ Prevent rendering before client is ready (avoids mismatched text)
   if (!mounted) return null;
 
   return (
     <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-gray-200/30 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-gradient-to-br from-teal-600 via-teal-500 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg">
               <span className="text-white font-bold text-xl">V</span>
@@ -64,7 +61,6 @@ const Header = () => {
             </span>
           </Link>
 
-          {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item) => (
               <Link
@@ -86,14 +82,13 @@ const Header = () => {
               </Link>
             ))}
 
-            {/* Language Dropdown */}
             <div className="relative ml-4">
               <button
                 onClick={() => setShowLangMenu(!showLangMenu)}
                 className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg border border-gray-200/50 hover:shadow-md transition-all duration-200"
               >
                 <Globe className="w-4 h-4 text-gray-600" />
-                <span className="text-2xl">{currentLanguage.flag}</span>
+                {/* <span className="text-2xl">{currentLanguage.flag}</span> */}
                 <span className="text-sm font-medium text-gray-700">
                   {currentLanguage.code.toUpperCase()}
                 </span>
@@ -115,7 +110,7 @@ const Header = () => {
                           : "text-gray-700"
                       }`}
                     >
-                      <span className="text-xl">{lang.flag}</span>
+                      {/* <span className="text-xl">{lang.flag}</span> */}
                       <span className="text-sm font-medium">{lang.name}</span>
                     </button>
                   ))}
@@ -124,7 +119,6 @@ const Header = () => {
             </div>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
             onClick={() => setIsOpen(!isOpen)}
@@ -133,8 +127,6 @@ const Header = () => {
           </button>
         </div>
       </div>
-
-      {/* Mobile Menu */}
       {isOpen && (
         <motion.div
           initial={{ opacity: 0, y: -10 }}
@@ -171,7 +163,7 @@ const Header = () => {
                         : "hover:bg-gray-100"
                     }`}
                   >
-                    <span className="text-lg">{lang.flag}</span>
+                    {/* <span className="text-lg">{lang.flag}</span> */}
                     <span className="text-sm font-medium">{lang.name}</span>
                   </button>
                 ))}

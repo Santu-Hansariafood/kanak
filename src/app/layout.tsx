@@ -4,7 +4,9 @@ import "./globals.css";
 import dynamic from "next/dynamic";
 const Header = dynamic(() => import("@/components/common/Header/Header"));
 const Footer = dynamic(() => import("@/components/common/Footer/Footer"));
-
+const I18nProviderWrapper = dynamic(
+  () => import("@/components/I18nProviderWrapper/I18nProviderWrapper")
+);
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -191,7 +193,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
-        <main>{children}</main>
+        <I18nProviderWrapper>{children}</I18nProviderWrapper>
         <Footer />
       </body>
     </html>
