@@ -1,0 +1,36 @@
+{
+  "title": "Meet Our Team",
+  "subtitle": "Passionate people behind Vitara’s excellence.",
+  "members": {
+    "sarah": {
+      "name": "Sarah Johnson",
+      "role": "Chief Executive Officer",
+      "bio": "Sarah leads the company with innovation and vision."
+    },
+    "michael": {
+      "name": "Michael Chen",
+      "role": "Head of Marketing",
+      "bio": "Michael connects brands with customers through creativity."
+    },
+    "emily": {
+      "name": "Emily Davis",
+      "role": "Product Designer",
+      "bio": "Emily designs user experiences that inspire trust and joy."
+    },
+    "david": {
+      "name": "David Patel",
+      "role": "CTO",
+      "bio": "David leads technology and innovation at Vitara."
+    },
+    "lisa": {
+      "name": "Lisa Thomas",
+      "role": "HR Manager",
+      "bio": "Lisa fosters a culture of collaboration and growth."
+    },
+    "james": {
+      "name": "James Anderson",
+      "role": "Finance Director",
+      "bio": "James ensures financial integrity and operational efficiency."
+    }
+  }
+}

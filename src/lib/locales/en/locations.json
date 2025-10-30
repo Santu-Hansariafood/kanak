@@ -1,0 +1,34 @@
+{
+  "locations": {
+    "title": "Our Global Offices",
+    "subtitle": "Vitara operates across continents to stay close to our clients.",
+    "headquarters": "Headquarters",
+    "getDirections": "Get Directions",
+    "list": {
+      "newyork": {
+        "city": "New York",
+        "country": "United States",
+        "address": "123 Broadway, Suite 456, New York, NY 10001",
+        "hours": "Mon-Fri: 9:00 AM - 6:00 PM EST"
+      },
+      "london": {
+        "city": "London",
+        "country": "United Kingdom",
+        "address": "45 King Street, London SW1Y 6QT, United Kingdom",
+        "hours": "Mon-Fri: 9:00 AM - 5:30 PM GMT"
+      },
+      "tokyo": {
+        "city": "Tokyo",
+        "country": "Japan",
+        "address": "1-2-3 Shibuya, Tokyo 150-0002, Japan",
+        "hours": "Mon-Fri: 9:00 AM - 6:00 PM JST"
+      },
+      "sydney": {
+        "city": "Sydney",
+        "country": "Australia",
+        "address": "100 George Street, Sydney NSW 2000, Australia",
+        "hours": "Mon-Fri: 9:00 AM - 5:30 PM AEST"
+      }
+    }
+  }
+}

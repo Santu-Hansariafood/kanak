@@ -19,31 +19,52 @@ import hiAbout from "../locales/hi/about.json";
 import taAbout from "../locales/ta/about.json";
 import bnAbout from "../locales/bn/about.json";
 import teAbout from "../locales/te/about.json";
+import enTeams from "../locales/en/teams.json";
+import hiTeams from "../locales/hi/teams.json";
+import taTeams from "../locales/ta/teams.json";
+import bnTeams from "../locales/bn/teams.json";
+import teTeams from "../locales/te/teams.json";
+import enLocations from "../locales/en/locations.json";
+import hiLocations from "../locales/hi/locations.json";
+import taLocations from "../locales/ta/locations.json";
+import bnLocations from "../locales/bn/locations.json";
+import teLocations from "../locales/te/locations.json";
+
 const resources = {
   en: {
     header: enHeader,
     footer: enFooter,
     about: enAbout,
+    teams: enTeams,
+    locations: enLocations,
   },
   hi: {
     header: hiHeader,
     footer: hiFooter,
     about: hiAbout,
+    teams: hiTeams,
+    locations: hiLocations,
   },
   ta: {
     header: taHeader,
     footer: taFooter,
     about: taAbout,
+    teams: taTeams,
+    locations: taLocations,
   },
   bn: {
     header: bnHeader,
     footer: bnFooter,
     about: bnAbout,
+    teams: bnTeams,
+    locations: bnLocations,
   },
   te: {
     header: teHeader,
     footer: teFooter,
     about: teAbout,
+    teams: teTeams,
+    locations: teLocations,
   },
 };
 
@@ -60,7 +81,7 @@ if (!i18n.isInitialized) {
         order: ["localStorage", "navigator", "htmlTag"],
         caches: ["localStorage"],
       },
-      ns: ["header", "footer", "about"],
+      ns: ["header", "footer", "about", "teams", "locations"],
       defaultNS: "header",
       react: { useSuspense: false },
     });
