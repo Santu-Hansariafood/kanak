@@ -1,0 +1,24 @@
+{
+  "carousel": {
+    "slides": [
+      {
+        "title": "புதுமை மற்றும் சிறப்பின் சங்கமம்",
+        "subtitle": "நவீன தீர்வுகளுடன் யோசனைகளை நனவாக்குதல்",
+        "cta": "தீர்வுகளை ஆராய்க",
+        "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+      },
+      {
+        "title": "உலகளாவிய வெற்றிக் கதைகள்",
+        "subtitle": "புதுமையான தொழில்நுட்பத்தின் மூலம் உலகளாவிய வணிகங்களை வலுப்படுத்தல்",
+        "cta": "போர்ட்ஃபோலியோவைப் பார்வையிடுக",
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+      },
+      {
+        "title": "எதிர்காலத்துக்கு தயாரான தீர்வுகள்",
+        "subtitle": "நிலையான வளர்ச்சிக்காக நாளைய தொழில்நுட்பத்தை இன்றே உருவாக்குதல்",
+        "cta": "மேலும் அறிக",
+        "image": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+      }
+    ]
+  }
+}

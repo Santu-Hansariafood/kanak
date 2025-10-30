@@ -1,0 +1,24 @@
+{
+  "carousel": {
+    "slides": [
+      {
+        "title": "ఆవిష్కరణ మరియు అద్భుతత కలయిక",
+        "subtitle": "అత్యాధునిక పరిష్కారాలతో ఆలోచనలను వాస్తవంగా మార్చడం",
+        "cta": "పరిష్కారాలను అన్వేషించండి",
+        "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+      },
+      {
+        "title": "ప్రపంచ విజయ కథలు",
+        "subtitle": "ఆవిష్కరణాత్మక సాంకేతికతతో ప్రపంచవ్యాప్తంగా వ్యాపారాలను శక్తివంతం చేయడం",
+        "cta": "పోర్ట్‌ఫోలియో చూడండి",
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+      },
+      {
+        "title": "భవిష్యత్తుకు సిద్ధమైన పరిష్కారాలు",
+        "subtitle": "సుస్థిర అభివృద్ధి కోసం రేపటి సాంకేతికతను ఈరోజే నిర్మించడం",
+        "cta": "మరింత తెలుసుకోండి",
+        "image": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+      }
+    ]
+  }
+}

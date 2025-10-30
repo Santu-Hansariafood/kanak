@@ -1,0 +1,24 @@
+{
+  "carousel": {
+    "slides": [
+      {
+        "title": "নবপ্রবেশ ও উৎকর্ষের সংমিশ্রণ",
+        "subtitle": "উন্নত সমাধানের মাধ্যমে চিন্তাকে বাস্তবে রূপ দেওয়া",
+        "cta": "সমাধান দেখুন",
+        "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+      },
+      {
+        "title": "গ্লোবাল সাফল্যের গল্প",
+        "subtitle": "নবীন প্রযুক্তির মাধ্যমে বিশ্বব্যাপী ব্যবসাগুলিকে ক্ষমতায়ন করা",
+        "cta": "পোর্টফোলিও দেখুন",
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+      },
+      {
+        "title": "ভবিষ্যৎমুখী সমাধান",
+        "subtitle": "টেকসই উন্নয়নের জন্য আজই আগামী দিনের প্রযুক্তি তৈরি করা",
+        "cta": "আরও জানুন",
+        "image": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+      }
+    ]
+  }
+}

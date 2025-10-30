@@ -17,23 +17,23 @@ const About: React.FC = () => {
   const values: ValueItem[] = [
     {
       icon: Target,
-      title: t('about.values.mission.title'),
-      desc: t('about.values.mission.desc'),
+      title: t('values.mission.title'),
+      desc: t('values.mission.desc'),
     },
     {
       icon: Eye,
-      title: t('about.values.vision.title'),
-      desc: t('about.values.vision.desc'),
+      title: t('values.vision.title'),
+      desc: t('values.vision.desc'),
     },
     {
       icon: Heart,
-      title: t('about.values.passion.title'),
-      desc: t('about.values.passion.desc'),
+      title: t('values.passion.title'),
+      desc: t('values.passion.desc'),
     },
     {
       icon: Zap,
-      title: t('about.values.innovation.title'),
-      desc: t('about.values.innovation.desc'),
+      title: t('values.innovation.title'),
+      desc: t('values.innovation.desc'),
     },
   ];
 
@@ -48,10 +48,10 @@ const About: React.FC = () => {
             className="text-center mb-16"
           >
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              {t('about.title')}
+              {t('title')}
             </h1>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              {t('about.subtitle')}
+              {t('subtitle')}
             </p>
           </motion.div>
 
@@ -62,13 +62,13 @@ const About: React.FC = () => {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                {t('about.story.title')}
+                {t('story.title')}
               </h2>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                {t('about.story.paragraph1')}
+                {t('story.paragraph1')}
               </p>
               <p className="text-gray-600 leading-relaxed">
-                {t('about.story.paragraph2')}
+                {t('story.paragraph2')}
               </p>
             </motion.div>
 

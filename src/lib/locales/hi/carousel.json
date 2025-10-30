@@ -1,0 +1,24 @@
+{
+  "carousel": {
+    "slides": [
+      {
+        "title": "नवाचार और उत्कृष्टता का संगम",
+        "subtitle": "आधुनिक समाधानों के साथ विचारों को वास्तविकता में बदलना",
+        "cta": "समाधान देखें",
+        "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+      },
+      {
+        "title": "वैश्विक सफलता की कहानियाँ",
+        "subtitle": "नवाचार तकनीक के माध्यम से दुनिया भर के व्यवसायों को सशक्त बनाना",
+        "cta": "पोर्टफोलियो देखें",
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+      },
+      {
+        "title": "भविष्य के लिए तैयार समाधान",
+        "subtitle": "सतत विकास के लिए आज ही कल की तकनीक का निर्माण",
+        "cta": "और जानें",
+        "image": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+      }
+    ]
+  }
+}

@@ -39,6 +39,21 @@ import hiBlog from "../locales/hi/blog.json";
 import taBlog from "../locales/ta/blog.json";
 import bnBlog from "../locales/bn/blog.json";
 import teBlog from "../locales/te/blog.json";
+import enHome from "../locales/en/home.json";
+import hiHome from "../locales/hi/home.json";
+import taHome from "../locales/ta/home.json";
+import bnHome from "../locales/bn/home.json";
+import teHome from "../locales/te/home.json";
+import enCarousel from "../locales/en/carousel.json";
+import hiCarousel from "../locales/hi/carousel.json";
+import taCarousel from "../locales/ta/carousel.json";
+import bnCarousel from "../locales/bn/carousel.json";
+import teCarousel from "../locales/te/carousel.json";
+import enCookie from "../locales/en/cookie.json";
+import hiCookie from "../locales/hi/cookie.json";
+import taCookie from "../locales/ta/cookie.json";
+import bnCookie from "../locales/bn/cookie.json";
+import teCookie from "../locales/te/cookie.json";
 
 const resources = {
   en: {
@@ -49,6 +64,9 @@ const resources = {
     locations: enLocations,
     products: enProducts,
     blog: enBlog,
+    home: enHome,
+    carousel: enCarousel,
+    cookie: enCookie,
   },
   hi: {
     header: hiHeader,
@@ -58,6 +76,9 @@ const resources = {
     locations: hiLocations,
     products: hiProducts,
     blog: hiBlog,
+    home: hiHome,
+    carousel: hiCarousel,
+    cookie: hiCookie,
   },
   ta: {
     header: taHeader,
@@ -67,6 +88,9 @@ const resources = {
     locations: taLocations,
     products: taProducts,
     blog: taBlog,
+    home: taHome,
+    carousel: taCarousel,
+    cookie: taCookie,
   },
   bn: {
     header: bnHeader,
@@ -76,6 +100,9 @@ const resources = {
     locations: bnLocations,
     products: bnProducts,
     blog: bnBlog,
+    home: bnHome,
+    carousel: bnCarousel,
+    cookie: bnCookie,
   },
   te: {
     header: teHeader,
@@ -85,6 +112,9 @@ const resources = {
     locations: teLocations,
     products: teProducts,
     blog: teBlog,
+    home: teHome,
+    carousel: teCarousel,
+    cookie: teCookie,
   },
 };
 
@@ -100,8 +130,9 @@ if (!i18n.isInitialized) {
       detection: {
         order: ["localStorage", "navigator", "htmlTag"],
         caches: ["localStorage"],
+        lookupLocalStorage: "i18nextLng",
       },
-      ns: ["header", "footer", "about", "teams", "locations", "products", "blog"],
+      ns: ["header", "footer", "about", "teams", "locations", "products", "blog", "home", "carousel", "cookie"],
       defaultNS: "header",
       react: { useSuspense: false },
     });
