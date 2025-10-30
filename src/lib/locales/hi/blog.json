@@ -1,0 +1,39 @@
+{
+  "title": "हमारा ब्लॉग",
+  "subtitle": "वितारा टीम की अंतर्दृष्टि, कहानियाँ और नवाचार।",
+  "featured": "विशेष पोस्ट",
+  "readMore": "और पढ़ें",
+  "read": "पढ़ें",
+  "posts": [
+    {
+      "title": "वेब डेवलपमेंट का भविष्य: 2024 में ध्यान देने योग्य रुझान",
+      "excerpt": "AI एकीकरण से लेकर प्रोग्रेसिव वेब ऐप्स तक, वेब डेवलपमेंट के भविष्य को आकार देने वाले नवीनतम रुझानों का पता लगाएँ।",
+      "author": "Sarah Johnson",
+      "date": "2024-01-15",
+      "readTime": "5 मिनट में पढ़ें",
+      "category": "प्रौद्योगिकी",
+      "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80",
+      "featured": true
+    },
+    {
+      "title": "आधुनिक आर्किटेक्चर के साथ स्केलेबल एप्लिकेशन बनाना",
+      "excerpt": "आधुनिक आर्किटेक्चरल पैटर्न का उपयोग करके ऐसे एप्लिकेशन कैसे डिज़ाइन करें जो आपके व्यवसाय के साथ बढ़ सकें, जानें।",
+      "author": "Michael Chen",
+      "date": "2024-01-12",
+      "readTime": "8 मिनट में पढ़ें",
+      "category": "आर्किटेक्चर",
+      "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80",
+      "featured": false
+    },
+    {
+      "title": "UX डिज़ाइन सिद्धांत जो उपयोगकर्ता जुड़ाव बढ़ाते हैं",
+      "excerpt": "ऐसे प्रमुख UX डिज़ाइन सिद्धांत जानें जो उपयोगकर्ता अनुभव और संतुष्टि को बेहतर बनाते हैं।",
+      "author": "Emily Rodriguez",
+      "date": "2024-01-10",
+      "readTime": "6 मिनट में पढ़ें",
+      "category": "डिज़ाइन",
+      "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&q=80",
+      "featured": false
+    }
+  ]
+}

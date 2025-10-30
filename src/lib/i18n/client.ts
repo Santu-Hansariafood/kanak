@@ -34,6 +34,11 @@ import hiProducts from "../locales/hi/products.json";
 import taProducts from "../locales/ta/products.json";
 import bnProducts from "../locales/bn/products.json";
 import teProducts from "../locales/te/products.json";
+import enBlog from "../locales/en/blog.json";
+import hiBlog from "../locales/hi/blog.json";
+import taBlog from "../locales/ta/blog.json";
+import bnBlog from "../locales/bn/blog.json";
+import teBlog from "../locales/te/blog.json";
 
 const resources = {
   en: {
@@ -43,6 +48,7 @@ const resources = {
     teams: enTeams,
     locations: enLocations,
     products: enProducts,
+    blog: enBlog,
   },
   hi: {
     header: hiHeader,
@@ -51,6 +57,7 @@ const resources = {
     teams: hiTeams,
     locations: hiLocations,
     products: hiProducts,
+    blog: hiBlog,
   },
   ta: {
     header: taHeader,
@@ -59,6 +66,7 @@ const resources = {
     teams: taTeams,
     locations: taLocations,
     products: taProducts,
+    blog: taBlog,
   },
   bn: {
     header: bnHeader,
@@ -67,6 +75,7 @@ const resources = {
     teams: bnTeams,
     locations: bnLocations,
     products: bnProducts,
+    blog: bnBlog,
   },
   te: {
     header: teHeader,
@@ -75,6 +84,7 @@ const resources = {
     teams: teTeams,
     locations: teLocations,
     products: teProducts,
+    blog: teBlog,
   },
 };
 
@@ -91,7 +101,7 @@ if (!i18n.isInitialized) {
         order: ["localStorage", "navigator", "htmlTag"],
         caches: ["localStorage"],
       },
-      ns: ["header", "footer", "about", "teams", "locations", "products"],
+      ns: ["header", "footer", "about", "teams", "locations", "products", "blog"],
       defaultNS: "header",
       react: { useSuspense: false },
     });
