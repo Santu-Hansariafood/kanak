@@ -1,28 +1,28 @@
 {
   "about": {
-    "title": "About Vitara",
-    "subtitle": "We are passionate about innovation, technology, and building solutions that empower people and businesses.",
+    "title": "What business are we in?",
+    "subtitle": "AGRI RISE, refocused from the core agricultural businesses of the past, creates and brands it as Hansaria Food “Kanak.” Founded by visionary entrepreneur Mr. Gopal Agarwal, Hansaria Food is committed to delivering India’s best food staples — including pulses, spices, grains, cereals, nuts, and processed staples — with superior quality, fair pricing, and nationwide distribution across India.",
     "story": {
       "title": "Our Story",
-      "paragraph1": "Vitara started with a simple idea — to bridge the gap between technology and people through creativity and purpose.",
-      "paragraph2": "Today, we continue to push boundaries, crafting digital products that make a real impact in everyday life."
+      "paragraph1": "Hansaria Food “Kanak,” the retail initiative of AGRI RISE PVT LTD, is at the heart of our consumer-facing operations. As a leading Indian agri-food brand, Hansaria Food Kanak aims to revolutionize the agricultural supply chain and retail sector by bringing premium-quality food staples directly from farms to families across India.",
+      "paragraph2": "To achieve this, Hansaria Food “Kanak” is establishing state-of-the-art packhouses across India. These modern facilities will process, sort, grade, and package agricultural produce to ensure freshness, quality, and consistency. By streamlining logistics and minimizing waste, we strengthen the connection between farmers and consumers, ensuring affordability, transparency, and efficient nationwide food distribution — the cornerstone of India’s evolving agri-economy."
     },
     "values": {
       "mission": {
         "title": "Our Mission",
-        "desc": "To inspire progress through meaningful innovation."
+        "desc": "To empower rural communities and farmers by simplifying India’s agricultural supply chain. We aim to reduce inefficiencies, enhance productivity, and create a transparent marketplace that ensures fair trade, sustainable growth, and better profit margins for all stakeholders in the food value chain."
       },
       "vision": {
         "title": "Our Vision",
-        "desc": "To be a global leader in delivering transformative digital experiences."
+        "desc": "To build a transparent, technology-driven agricultural ecosystem that directly connects farmers, suppliers, and consumers. Our vision is to lead India’s agri-business sector by promoting fair pricing, sustainable farming, and delivering high-quality food commodities to global markets."
       },
       "passion": {
         "title": "Our Passion",
-        "desc": "We love what we do and pour creativity into every project."
+        "desc": "Driven by our ‘From Farm to Family’ philosophy, we are passionate about transforming how agricultural commodities reach consumers. Our focus is on empowering farmers, ensuring food quality, and fostering strong trade relationships that drive India’s agricultural growth and food security."
       },
       "innovation": {
         "title": "Our Innovation",
-        "desc": "We embrace change and continuously evolve with new ideas."
+        "desc": "Harnessing innovation in agri-tech, supply chain management, and global trade intelligence, we leverage real-time market insights to optimize operations and reduce waste. Our data-driven, farmer-first approach connects international markets, enhances transparency, and establishes Hansaria Food Kanak as a leader in agricultural innovation and sustainability."
       }
     }
   }

@@ -1,26 +1,26 @@
 {
-  "company_name": "ভিটার",
-  "tagline": "উদ্ভাবনী প্রযুক্তি সমাধানের মাধ্যমে ব্যবসা রূপান্তর।",
-  "email": "hello@vitara.com",
-  "phone": "+১ (৫৫৫) ১২৩-৪৫৬৭",
-  "address": "নিউ ইয়র্ক, যুক্তরাষ্ট্র",
-  
+  "company_name": "কানক রিটেইল",
+  "tagline": "খামার থেকে পরিবারে, আমরা গুণমান সরবরাহ করি।",
+  "email": "purchase@kanakretail.com",
+  "phone": "+91 98304 33535",
+  "address": "প্রিমার্ক স্কোয়ার, প্লট নং 1, সল্ট লেক বাইপাস, LA ব্লক, সেক্টর: 3, বিধাননগর, কলকাতা, পশ্চিমবঙ্গ 700106",
+
   "company": "কোম্পানি",
   "about_us": "আমাদের সম্পর্কে",
   "our_team": "আমাদের দল",
-  "careers": "ক্যারিয়ার",
+  "careers": "চাকরি",
   "press": "প্রেস",
 
-  "services": "সেবা",
-  "our_services": "আমাদের সেবা",
+  "services": "পরিষেবা",
+  "our_services": "আমাদের পরিষেবা",
   "web_dev": "ওয়েব ডেভেলপমেন্ট",
   "mobile_apps": "মোবাইল অ্যাপস",
-  "cloud_services": "ক্লাউড সার্ভিসেস",
+  "cloud_services": "ক্লাউড পরিষেবা",
   "consulting": "পরামর্শ",
 
-  "resources": "রিসোর্স",
+  "resources": "সম্পদ",
   "blog": "ব্লগ",
-  "documentation": "ডকুমেন্টেশন",
+  "documentation": "নথিপত্র",
   "support": "সহায়তা",
   "contact": "যোগাযোগ",
 
@@ -29,13 +29,13 @@
   "privacy_policy": "গোপনীয়তা নীতি",
   "terms_of_service": "পরিষেবার শর্তাবলী",
   "cookie_policy": "কুকি নীতি",
-  "gdpr": "জিডিপিআর",
+  "gdpr": "GDPR",
 
   "social_facebook": "ফেসবুক",
   "social_twitter": "টুইটার",
-  "social_linkedin": "লিংকডইন",
+  "social_linkedin": "লিঙ্কডইন",
   "social_instagram": "ইনস্টাগ্রাম",
 
-  "scroll_top": "উপরে যান",
+  "scroll_top": "শীর্ষে ফিরে যান",
   "copyright": "সমস্ত অধিকার সংরক্ষিত।"
 }

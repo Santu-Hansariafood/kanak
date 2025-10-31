@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { Menu, X, Globe } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
 
 const Header = () => {
   const { t, i18n } = useTranslation();
@@ -53,12 +54,20 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-teal-600 via-teal-500 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg">
-              <span className="text-white font-bold text-xl">V</span>
+            <div className="relative h-8 w-24 md:h-10 md:w-32">
+              <Image
+                src="/kanak.jpg"
+                alt="VITARA Logo"
+                fill
+                priority
+                sizes="(max-width: 768px) 100px, 160px"
+                className="object-contain"
+                style={{
+                  filter: "drop-shadow(0px 1px 2px rgba(0,0,0,0.1))",
+                  mixBlendMode: "multiply",
+                }}
+              />
             </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-teal-600 to-cyan-500 bg-clip-text text-transparent">
-              VITARA
-            </span>
           </Link>
 
           <div className="hidden md:flex items-center space-x-1">

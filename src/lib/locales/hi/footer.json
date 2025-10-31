@@ -1,41 +1,41 @@
 {
-  "company_name": "विटारा",
-  "tagline": "नवोन्मेषी तकनीकी समाधानों के माध्यम से व्यवसायों को रूपांतरित करना।",
-  "email": "hello@vitara.com",
-  "phone": "+१ (५५५) १२३-४५६७",
-  "address": "नई दिल्ली, भारत",
-  
+  "company_name": "कनक रिटेल",
+  "tagline": "फार्म से परिवार तक, हम गुणवत्ता प्रदान करते हैं।",
+  "email": "purchase@kanakretail.com",
+  "phone": "+91 98304 33535",
+  "address": "प्रिमार्क स्क्वायर, प्लॉट नंबर 1, सॉल्ट लेक बाईपास, LA ब्लॉक, सेक्टर 3, बिधाननगर, कोलकाता, पश्चिम बंगाल 700106",
+
   "company": "कंपनी",
   "about_us": "हमारे बारे में",
   "our_team": "हमारी टीम",
   "careers": "करियर",
   "press": "प्रेस",
 
-  "services": "सेवाएं",
-  "our_services": "हमारी सेवाएं",
+  "services": "सेवाएँ",
+  "our_services": "हमारी सेवाएँ",
   "web_dev": "वेब विकास",
   "mobile_apps": "मोबाइल ऐप्स",
-  "cloud_services": "क्लाउड सेवाएं",
+  "cloud_services": "क्लाउड सेवाएँ",
   "consulting": "परामर्श",
 
   "resources": "संसाधन",
   "blog": "ब्लॉग",
-  "documentation": "दस्तावेज़",
+  "documentation": "दस्तावेज़ीकरण",
   "support": "सहायता",
-  "contact": "संपर्क करें",
+  "contact": "संपर्क",
 
   "legal": "कानूनी",
   "legal_info": "कानूनी जानकारी",
   "privacy_policy": "गोपनीयता नीति",
   "terms_of_service": "सेवा की शर्तें",
   "cookie_policy": "कुकी नीति",
-  "gdpr": "जीडीपीआर",
+  "gdpr": "GDPR",
 
   "social_facebook": "फेसबुक",
   "social_twitter": "ट्विटर",
   "social_linkedin": "लिंक्डइन",
   "social_instagram": "इंस्टाग्राम",
 
-  "scroll_top": "ऊपर जाएं",
-  "copyright": "सभी अधिकार सुरक्षित।"
+  "scroll_top": "शीर्ष पर जाएँ",
+  "copyright": "सर्वाधिकार सुरक्षित।"
 }
