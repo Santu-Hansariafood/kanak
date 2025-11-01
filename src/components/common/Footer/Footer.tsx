@@ -75,9 +75,6 @@ const Footer = () => {
           <div className="lg:col-span-2 space-y-6">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
               <div className="flex items-center space-x-3">
-                <div className="relative w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg">
-                  <span className="text-white font-bold text-2xl">V</span>
-                </div>
                 <span className="text-3xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                   {t("company_name")}
                 </span>

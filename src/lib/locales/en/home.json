@@ -1,35 +1,35 @@
 {
   "home": {
     "whyChoose": {
-      "title": "Why Choose Us",
-      "subtitle": "We deliver excellence with every project."
+      "title": "Why Choose Hansaria Food Kanak",
+      "subtitle": "Because at Hansaria Food Kanak, we go beyond trading — we connect farms to families with honesty, purity, and passion. From handpicked Indian spices to essential grains and cereals, we deliver freshness, flavor, and fairness in every grain."
     },
     "features": [
       {
-        "icon": "Star",
-        "title": "Excellence",
-        "desc": "Delivering top-quality solutions that exceed expectations"
+        "icon": "Globe2",
+        "title": "Truly International Experience",
+        "desc": "With deep expertise in global agricultural commodities and Indian spices, Hansaria Food Kanak provides reliable insights and seamless export operations, ensuring that our customers experience world-class quality and service in every shipment."
       },
       {
-        "icon": "Users",
-        "title": "Expert Team",
-        "desc": "Skilled professionals dedicated to your success"
+        "icon": "Network",
+        "title": "Largest Network",
+        "desc": "We maintain one of the strongest agricultural networks connecting farmers, traders, and processors across India. Our supply chain ensures timely delivery of pulses, grains, and spices while maintaining consistency, transparency, and fair trade."
       },
       {
-        "icon": "Globe",
-        "title": "Global Reach",
-        "desc": "Serving clients worldwide with 24/7 support"
+        "icon": "Factory",
+        "title": "Farm to Family Commitment",
+        "desc": "Hansaria Food Kanak simplifies the agricultural supply chain by directly linking farmers and consumers. We eliminate middlemen, ensuring better prices for farmers and fresher, more authentic products for families worldwide."
       },
       {
-        "icon": "Award",
-        "title": "Award Winning",
-        "desc": "Recognized for innovation and customer satisfaction"
+        "icon": "ShieldCheck",
+        "title": "Quality & Transparency",
+        "desc": "Purity and integrity define our brand. Every Kanak spice, grain, and oilseed undergoes rigorous quality checks and sustainable sourcing. We maintain complete transparency to build long-term trust and deliver excellence in every product."
       }
     ],
     "cta": {
-      "title": "Ready to Get Started?",
-      "subtitle": "Join us and take your business to the next level.",
-      "button": "Get Started"
+      "title": "Experience the Taste of Trust with Kanak",
+      "subtitle": "Join Hansaria Food Kanak — where agricultural innovation meets traditional values. Discover India’s most trusted source for pure spices, grains, and cereals that bring health and happiness from farm to family.",
+      "button": "Explore Our Products"
     }
   }
 }

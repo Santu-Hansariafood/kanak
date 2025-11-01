@@ -2,22 +2,34 @@
   "carousel": {
     "slides": [
       {
-        "title": "Innovation Meets Excellence",
-        "subtitle": "Transforming ideas into reality with cutting-edge solutions",
-        "cta": "Explore Solutions",
-        "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+        "title": "The Aroma of Authentic Indian Spices",
+        "subtitle": "Hansaria Food Kanak brings the essence of India’s finest spices — pure, aromatic, and full of flavor.",
+        "cta": "Explore Our Spices",
+        "image": "https://images.unsplash.com/photo-1604908176997-3b45b30d0c2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
       },
       {
-        "title": "Global Success Stories",
-        "subtitle": "Empowering businesses worldwide with innovative technology",
-        "cta": "View Portfolio",
-        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+        "title": "Purity You Can Taste, Quality You Can Trust",
+        "subtitle": "Every Kanak spice is handpicked, sun-dried, and packed with care to preserve freshness and natural aroma.",
+        "cta": "Shop Now",
+        "image": "https://images.unsplash.com/photo-1505577058444-a3dab90d4253?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
       },
       {
-        "title": "Future-Ready Solutions",
-        "subtitle": "Building tomorrow's technology today for sustainable growth",
-        "cta": "Learn More",
-        "image": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+        "title": "Blending Tradition with Taste",
+        "subtitle": "From turmeric to cumin, Kanak offers a premium range of Indian spices that define the soul of Indian cooking.",
+        "cta": "Discover Our Range",
+        "image": "https://images.unsplash.com/photo-1623065422901-5b3c73a67c09?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+      },
+      {
+        "title": "From the Fields to Your Kitchen",
+        "subtitle": "Hansaria Food Kanak sources directly from trusted Indian farms, ensuring purity, freshness, and sustainability in every spice.",
+        "cta": "Know Our Story",
+        "image": "https://images.unsplash.com/photo-1605470027218-5b8bdf75b6e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+      },
+      {
+        "title": "Experience the Magic of Kanak Spices",
+        "subtitle": "Add color, aroma, and health to your meals with Kanak’s authentic Indian spices — the true taste of tradition.",
+        "cta": "Taste the Difference",
+        "image": "https://images.unsplash.com/photo-1623065423095-0f9c3cdb9f7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
       }
     ]
   }
