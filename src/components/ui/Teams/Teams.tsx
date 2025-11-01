@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Linkedin, Twitter, Mail } from "lucide-react";
 import { useTranslation } from "react-i18next";
+
 interface TeamMember {
   name: string;
   role: string;
@@ -26,7 +27,7 @@ const Teams: React.FC = () => {
       bio: t("members.sarah.bio"),
       image:
         "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=400&q=80",
-      social: { linkedin: "#", twitter: "#", email: "sarah@vitara.com" },
+      social: t("members.sarah.social", { returnObjects: true }) as TeamMember["social"],
     },
     {
       name: t("members.michael.name"),
@@ -34,7 +35,7 @@ const Teams: React.FC = () => {
       bio: t("members.michael.bio"),
       image:
         "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80",
-      social: { linkedin: "#", twitter: "#", email: "michael@vitara.com" },
+      social: t("members.michael.social", { returnObjects: true }) as TeamMember["social"],
     },
     {
       name: t("members.emily.name"),
@@ -42,7 +43,7 @@ const Teams: React.FC = () => {
       bio: t("members.emily.bio"),
       image:
         "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&q=80",
-      social: { linkedin: "#", twitter: "#", email: "emily@vitara.com" },
+      social: t("members.emily.social", { returnObjects: true }) as TeamMember["social"],
     },
     {
       name: t("members.david.name"),
@@ -50,7 +51,7 @@ const Teams: React.FC = () => {
       bio: t("members.david.bio"),
       image:
         "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
-      social: { linkedin: "#", twitter: "#", email: "david@vitara.com" },
+      social: t("members.david.social", { returnObjects: true }) as TeamMember["social"],
     },
     {
       name: t("members.lisa.name"),
@@ -58,7 +59,7 @@ const Teams: React.FC = () => {
       bio: t("members.lisa.bio"),
       image:
         "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=400&q=80",
-      social: { linkedin: "#", twitter: "#", email: "lisa@vitara.com" },
+      social: t("members.lisa.social", { returnObjects: true }) as TeamMember["social"],
     },
     {
       name: t("members.james.name"),
@@ -66,7 +67,7 @@ const Teams: React.FC = () => {
       bio: t("members.james.bio"),
       image:
         "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80",
-      social: { linkedin: "#", twitter: "#", email: "james@vitara.com" },
+      social: t("members.james.social", { returnObjects: true }) as TeamMember["social"],
     },
   ];
 
@@ -87,6 +88,7 @@ const Teams: React.FC = () => {
               {t("subtitle")}
             </p>
           </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
               <motion.div
@@ -101,7 +103,6 @@ const Teams: React.FC = () => {
                   alt={member.name}
                   className="w-32 h-32 rounded-full mx-auto object-cover border-4 border-white shadow-lg mb-6 group-hover:scale-105 transition-transform duration-300"
                 />
-
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   {member.name}
                 </h3>

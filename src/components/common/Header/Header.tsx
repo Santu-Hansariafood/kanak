@@ -3,7 +3,7 @@ import "@/lib/i18n/client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Globe } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import Image from "next/image";
@@ -20,11 +20,11 @@ const Header = () => {
   }, []);
 
   const languages = [
-    { code: "en", name: "English"},
+    { code: "en", name: "English" },
     { code: "hi", name: "हिन्दी" },
-    { code: "ta", name: "தமிழ்"},
+    { code: "ta", name: "தமிழ்" },
     { code: "bn", name: "বাংলা" },
-    { code: "te", name: "తెలుగు"},
+    { code: "te", name: "తెలుగు" },
   ];
 
   const currentLanguage =
@@ -50,32 +50,34 @@ const Header = () => {
   if (!mounted) return null;
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-gray-200/30 shadow-sm">
+    <motion.nav
+      initial={{ y: -50, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="sticky top-0 z-50 bg-white/90 backdrop-blur-2xl border-b border-gray-100/60 shadow-sm"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="relative h-8 w-24 md:h-10 md:w-32">
+          <Link href="/" className="flex items-center space-x-3">
+            <div className="relative h-10 w-32 sm:h-12 sm:w-40">
               <Image
                 src="/kanak.jpg"
-                alt="VITARA Logo"
+                alt="Kanak Logo"
                 fill
                 priority
-                sizes="(max-width: 768px) 100px, 160px"
-                className="object-contain"
-                style={{
-                  filter: "drop-shadow(0px 1px 2px rgba(0,0,0,0.1))",
-                  mixBlendMode: "multiply",
-                }}
+                sizes="(max-width: 768px) 120px, 180px"
+                className="object-contain drop-shadow-sm"
+                style={{ mixBlendMode: "multiply" }}
               />
             </div>
           </Link>
 
-          <div className="hidden md:flex items-center space-x-1">
+          <div className="hidden md:flex items-center space-x-2">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.path}
-                className={`relative px-4 py-2 text-sm font-semibold transition-all duration-300 rounded-lg ${
+                className={`relative px-4 py-2 text-[15px] font-semibold tracking-wide transition-all duration-300 rounded-xl ${
                   pathname === item.path
                     ? "text-teal-600 bg-teal-50"
                     : "text-gray-700 hover:text-teal-600 hover:bg-gray-50"
@@ -84,104 +86,108 @@ const Header = () => {
                 {item.name}
                 {pathname === item.path && (
                   <motion.div
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-teal-600"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-teal-600 rounded-full"
                     layoutId="navbar-indicator"
                   />
                 )}
               </Link>
             ))}
-
             <div className="relative ml-4">
               <button
                 onClick={() => setShowLangMenu(!showLangMenu)}
-                className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg border border-gray-200/50 hover:shadow-md transition-all duration-200"
+                className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-gray-50 to-gray-100 rounded-xl border border-gray-200/50 hover:shadow-lg transition-all duration-200"
               >
-                <Globe className="w-4 h-4 text-gray-600" />
-                {/* <span className="text-2xl">{currentLanguage.flag}</span> */}
+                <Globe className="w-5 h-5 text-teal-600" />
                 <span className="text-sm font-medium text-gray-700">
                   {currentLanguage.code.toUpperCase()}
                 </span>
               </button>
 
-              {showLangMenu && (
-                <motion.div
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="absolute right-0 mt-2 w-48 bg-white/98 backdrop-blur-xl rounded-xl shadow-lg border border-gray-200/50 py-2 z-50"
-                >
-                  {languages.map((lang) => (
-                    <button
-                      key={lang.code}
-                      onClick={() => changeLanguage(lang.code)}
-                      className={`w-full flex items-center space-x-3 px-4 py-2 hover:bg-teal-50 transition-colors ${
-                        i18n.language === lang.code
-                          ? "bg-teal-50 text-teal-600"
-                          : "text-gray-700"
-                      }`}
-                    >
-                      {/* <span className="text-xl">{lang.flag}</span> */}
-                      <span className="text-sm font-medium">{lang.name}</span>
-                    </button>
-                  ))}
-                </motion.div>
-              )}
+              <AnimatePresence>
+                {showLangMenu && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    className="absolute right-0 mt-3 w-48 bg-white/95 backdrop-blur-xl rounded-2xl shadow-xl border border-gray-200/70 py-2 z-50"
+                  >
+                    {languages.map((lang) => (
+                      <button
+                        key={lang.code}
+                        onClick={() => changeLanguage(lang.code)}
+                        className={`w-full flex items-center space-x-3 px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
+                          i18n.language === lang.code
+                            ? "bg-teal-50 text-teal-600"
+                            : "text-gray-700 hover:bg-gray-50"
+                        }`}
+                      >
+                        {lang.name}
+                      </button>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           </div>
-
           <button
             className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isOpen ? (
+              <X className="w-6 h-6 text-teal-700" />
+            ) : (
+              <Menu className="w-6 h-6 text-teal-700" />
+            )}
           </button>
         </div>
       </div>
-      {isOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -10 }}
-          className="md:hidden bg-white/98 backdrop-blur-xl border-t border-gray-200/50 shadow-lg"
-        >
-          <div className="px-4 py-2 space-y-1">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.path}
-                onClick={() => setIsOpen(false)}
-                className={`block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 ${
-                  pathname === item.path
-                    ? "text-teal-600 bg-teal-50"
-                    : "text-gray-700 hover:text-teal-600 hover:bg-gray-50"
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            className="md:hidden bg-white/95 backdrop-blur-2xl border-t border-gray-100 shadow-lg"
+          >
+            <div className="px-4 py-4 space-y-2">
+              {navItems.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.path}
+                  onClick={() => setIsOpen(false)}
+                  className={`block px-4 py-3 rounded-xl text-base font-medium transition-all duration-200 ${
+                    pathname === item.path
+                      ? "text-teal-600 bg-teal-50"
+                      : "text-gray-700 hover:text-teal-600 hover:bg-gray-50"
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              ))}
 
-            <div className="px-4 py-3 mt-2 bg-gray-50 rounded-lg">
-              <p className="text-xs text-gray-500 mb-2">{t("nav.language")}</p>
-              <div className="space-y-1">
-                {languages.map((lang) => (
-                  <button
-                    key={lang.code}
-                    onClick={() => changeLanguage(lang.code)}
-                    className={`w-full flex items-center space-x-2 px-3 py-2 rounded-lg transition-colors ${
-                      i18n.language === lang.code
-                        ? "bg-teal-100 text-teal-600"
-                        : "hover:bg-gray-100"
-                    }`}
-                  >
-                    {/* <span className="text-lg">{lang.flag}</span> */}
-                    <span className="text-sm font-medium">{lang.name}</span>
-                  </button>
-                ))}
+              <div className="px-4 py-3 mt-3 bg-gray-50 rounded-xl">
+                <p className="text-xs text-gray-500 mb-2">{t("nav.language")}</p>
+                <div className="space-y-1">
+                  {languages.map((lang) => (
+                    <button
+                      key={lang.code}
+                      onClick={() => changeLanguage(lang.code)}
+                      className={`w-full flex items-center space-x-2 px-3 py-2 rounded-lg transition-colors ${
+                        i18n.language === lang.code
+                          ? "bg-teal-100 text-teal-600"
+                          : "hover:bg-gray-100"
+                      }`}
+                    >
+                      <span className="text-sm font-medium">{lang.name}</span>
+                    </button>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-        </motion.div>
-      )}
-    </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.nav>
   );
 };
 

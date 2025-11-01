@@ -1,36 +1,66 @@
 {
   "title": "Meet Our Team",
-  "subtitle": "Passionate people behind Vitara’s excellence.",
+  "subtitle": "Passionate people behind Kanak Retail excellence.",
   "members": {
     "sarah": {
-      "name": "Sarah Johnson",
+      "name": "Gopal Agarwal",
       "role": "Chief Executive Officer",
-      "bio": "Sarah leads the company with innovation and vision."
+      "bio": "Gopal leads the company with innovation and vision.",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/gopalagarwal",
+        "twitter": "https://twitter.com/gopalagarwal",
+        "email": "gopal@hansariafood.com"
+      }
     },
     "michael": {
-      "name": "Michael Chen",
-      "role": "Head of Marketing",
-      "bio": "Michael connects brands with customers through creativity."
+      "name": "Sunita Agarwalla",
+      "role": "Chief Executive Officer",
+      "bio": "Sunita leads the company with innovation and vision.",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/sunitaagarwalla",
+        "twitter": "https://twitter.com/sunitaagarwalla",
+        "email": "sunita@hansariafood.com"
+      }
     },
     "emily": {
-      "name": "Emily Davis",
-      "role": "Product Designer",
-      "bio": "Emily designs user experiences that inspire trust and joy."
+      "name": "Veerapandian n.r.",
+      "role": "President",
+      "bio": "Veerapandian n.r. is a visionary leader.",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/veerapandian",
+        "twitter": "https://twitter.com/veerapandian",
+        "email": "veera@hansariafood.com"
+      }
     },
     "david": {
       "name": "David Patel",
       "role": "CTO",
-      "bio": "David leads technology and innovation at Vitara."
+      "bio": "David leads technology and innovation at Kanak Retail.",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/davidpatel",
+        "twitter": "https://twitter.com/davidpatel",
+        "email": "david@kanakretail.com"
+      }
     },
     "lisa": {
       "name": "Lisa Thomas",
       "role": "HR Manager",
-      "bio": "Lisa fosters a culture of collaboration and growth."
+      "bio": "Lisa fosters a culture of collaboration and growth.",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/lisathomas",
+        "twitter": "https://twitter.com/lisathomas",
+        "email": "lisa@kanakretail.com"
+      }
     },
     "james": {
       "name": "James Anderson",
       "role": "Finance Director",
-      "bio": "James ensures financial integrity and operational efficiency."
+      "bio": "James ensures financial integrity and operational efficiency.",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/jamesanderson",
+        "twitter": "https://twitter.com/jamesanderson",
+        "email": "james@kanakretail.com"
+      }
     }
   }
 }

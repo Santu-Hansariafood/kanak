@@ -94,7 +94,7 @@ const Locations: React.FC = () => {
                     className="rounded-t-2xl"
                   ></iframe>
                   {loc.isHeadquarters && (
-                    <div className="absolute top-4 left-4 bg-gradient-to-r from-amber-600 to-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-md">
+                    <div className="absolute top-4 left-4 bg-gradient-to-r  from-teal-600 to-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-md">
                       {t("headquarters")}
                     </div>
                   )}
@@ -140,7 +140,7 @@ const Locations: React.FC = () => {
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full mt-6 bg-gradient-to-r from-amber-600 to-yellow-500 text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300"
+                    className="w-full mt-6 bg-gradient-to-r  from-teal-600 to-cyan-500 text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300"
                     onClick={() =>
                       window.open(loc.mapUrl.replace("&output=embed", ""), "_blank")
                     }
