@@ -1,34 +1,36 @@
 {
-  "locations": {
-    "title": "Our Global Offices",
-    "subtitle": "Vitara operates across continents to stay close to our clients.",
-    "headquarters": "Headquarters",
-    "getDirections": "Get Directions",
-    "list": {
-      "newyork": {
-        "city": "New York",
-        "country": "United States",
-        "address": "123 Broadway, Suite 456, New York, NY 10001",
-        "hours": "Mon-Fri: 9:00 AM - 6:00 PM EST"
-      },
-      "london": {
-        "city": "London",
-        "country": "United Kingdom",
-        "address": "45 King Street, London SW1Y 6QT, United Kingdom",
-        "hours": "Mon-Fri: 9:00 AM - 5:30 PM GMT"
-      },
-      "tokyo": {
-        "city": "Tokyo",
-        "country": "Japan",
-        "address": "1-2-3 Shibuya, Tokyo 150-0002, Japan",
-        "hours": "Mon-Fri: 9:00 AM - 6:00 PM JST"
-      },
-      "sydney": {
-        "city": "Sydney",
-        "country": "Australia",
-        "address": "100 George Street, Sydney NSW 2000, Australia",
-        "hours": "Mon-Fri: 9:00 AM - 5:30 PM AEST"
-      }
+  "title": "Hansaria Food Office Addresses",
+  "subtitle": "Explore our offices located across India.",
+  "headquarters": "Headquarters",
+  "getDirections": "Get Directions",
+  "list": {
+    "corporate": {
+      "title": "Corporate Office",
+      "address": "Primarc Square 6th Floor, Plot No.1, Salt Lake Bypass, LA Block, Sector: 3, Bidhannagar, Kolkata, West Bengal 700098",
+      "phone": "+91-XXXXXXXXXX",
+      "email": "info@hansariafoods.com",
+      "hours": "Mon - Sat: 10:00 AM - 7:00 PM"
+    },
+    "register": {
+      "title": "Register Office",
+      "address": "207, Maharshi Debendra Rd, Room no - 111, 6th Floor, Burra Bazar, Kolkata, West Bengal 700007, India",
+      "phone": "+91-XXXXXXXXXX",
+      "email": "register@hansariafoods.com",
+      "hours": "Mon - Sat: 10:00 AM - 7:00 PM"
+    },
+    "chennai": {
+      "title": "Chennai Office",
+      "address": "G5, Mahalakshmi Flats, 26 Tank Bund Road, Nungambakkam, Chennai 600034",
+      "phone": "+91-XXXXXXXXXX",
+      "email": "chennai@hansariafoods.com",
+      "hours": "Mon - Sat: 10:00 AM - 7:00 PM"
+    },
+    "pack": {
+      "title": "Pack Office",
+      "address": "1/612, Kothapulli Village, Reddiyachatram, Dindugal, Tamil Nadu - 624622",
+      "phone": "+91-XXXXXXXXXX",
+      "email": "pack@hansariafoods.com",
+      "hours": "Mon - Sat: 10:00 AM - 7:00 PM"
     }
   }
 }
