@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import "@/lib/i18n/client";
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 
 const Carousel = () => {
@@ -16,53 +17,29 @@ const Carousel = () => {
     cta: string;
   }[];
 
-  const defaultSlides = [
-    {
-      title: 'Innovation Meets Excellence',
-      subtitle: 'Transforming ideas into reality with cutting-edge solutions',
-      image:
-        'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
-      cta: 'Explore Solutions',
-    },
-    {
-      title: 'Global Success Stories',
-      subtitle:
-        'Empowering businesses worldwide with innovative technology',
-      image:
-        'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
-      cta: 'View Portfolio',
-    },
-    {
-      title: 'Future-Ready Solutions',
-      subtitle:
-        "Building tomorrow's technology today for sustainable growth",
-      image:
-        'https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
-      cta: 'Learn More',
-    },
-  ];
-
-  const slidesToUse = Array.isArray(slides) && slides.length > 0 ? slides : defaultSlides;
+  // Handle empty or missing slides gracefully
+  if (!Array.isArray(slides) || slides.length === 0) {
+    return (
+      <div className="flex items-center justify-center h-screen text-gray-500">
+        No slides available.
+      </div>
+    );
+  }
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slidesToUse.length);
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
     return () => clearInterval(timer);
-  }, [slidesToUse.length]);
+  }, [slides.length]);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slidesToUse.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slidesToUse.length) % slidesToUse.length);
-  };
-
-  const current = slidesToUse[currentSlide];
+  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
+  const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  const current = slides[currentSlide];
 
   return (
     <div className="relative h-screen overflow-hidden">
+      {/* Background Image Transition */}
       <AnimatePresence mode="wait">
         <motion.div
           key={currentSlide}
@@ -72,15 +49,20 @@ const Carousel = () => {
           transition={{ duration: 0.7, ease: 'easeInOut' }}
           className="absolute inset-0"
         >
-          <div
-            className="w-full h-full bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: `url(${current.image})` }}
-          >
+          <div className="relative w-full h-full">
+            <Image
+              src={current.image}
+              alt={current.title}
+              fill
+              priority
+              className="object-cover object-center"
+            />
             <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/60" />
           </div>
         </motion.div>
       </AnimatePresence>
 
+      {/* Text Content */}
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="text-center text-white px-4 max-w-4xl">
           <motion.h1
@@ -116,6 +98,8 @@ const Carousel = () => {
           </motion.button>
         </div>
       </div>
+
+      {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
         className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-md text-white p-3 rounded-full hover:bg-white/40 hover:scale-110 transition-all duration-300 shadow-lg"
@@ -129,8 +113,10 @@ const Carousel = () => {
       >
         <ChevronRight className="w-6 h-6" />
       </button>
+
+      {/* Dots */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-3">
-        {slidesToUse.map((_, index) => (
+        {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}

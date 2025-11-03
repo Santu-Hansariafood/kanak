@@ -59,17 +59,19 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <Link href="/" className="flex items-center space-x-3">
-            <div className="relative h-10 w-32 sm:h-12 sm:w-40">
+            <div className="relative h-12 w-12 sm:h-14 sm:w-14 rounded-full overflow-hidden border-2 border-teal-600 bg-white shadow-md">
               <Image
                 src="/kanak.jpg"
                 alt="Kanak Logo"
                 fill
                 priority
-                sizes="(max-width: 768px) 120px, 180px"
-                className="object-contain drop-shadow-sm"
-                style={{ mixBlendMode: "multiply" }}
+                sizes="(max-width: 768px) 48px, 56px"
+                className="object-cover"
               />
             </div>
+            {/* <span className="text-xl font-bold text-teal-700 tracking-wide hidden sm:block">
+              Kanak
+            </span> */}
           </Link>
 
           <div className="hidden md:flex items-center space-x-2">
