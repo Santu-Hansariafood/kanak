@@ -1,10 +1,13 @@
 'use client';
+
 import React from 'react';
 import "@/lib/i18n/client";
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Target, Eye, Heart, Zap } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import dynamic from 'next/dynamic';
+
 const Title = dynamic(() => import('@/components/common/Title/Title'));
 const Paragraph = dynamic(() => import('@/components/common/Paragraph/Paragraph'));
 
@@ -62,23 +65,24 @@ const About: React.FC = () => {
                 align="left"
                 className="mb-6"
               />
-              <Paragraph
-                text={t('about.story.paragraph1')}
-                className="mb-6"
-              />
+              <Paragraph text={t('about.story.paragraph1')} className="mb-6" />
               <Paragraph text={t('about.story.paragraph2')} />
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              className="relative"
+              className="relative w-full h-[400px] lg:h-[500px]"
             >
-              <img
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
-                alt="Team collaboration"
-                className="rounded-2xl shadow-2xl object-cover w-full"
+              <Image
+                src="/about/about.webp"
+                alt="Team collaboration at Kanak Retail"
+                fill
+                priority
+                className="rounded-2xl shadow-2xl object-cover"
+                sizes="(max-width: 768px) 100vw,
+                       (max-width: 1200px) 50vw,
+                       33vw"
               />
             </motion.div>
           </div>

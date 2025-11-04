@@ -4,6 +4,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Calendar, User, ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
+import dynamic from "next/dynamic";
+const Title = dynamic(() => import("@/components/common/Title/Title"));
+const Paragraph = dynamic(() => import("@/components/common/Paragraph/Paragraph"));
 
 const Blog = () => {
   const { t } = useTranslation("blog");
@@ -26,20 +30,10 @@ const Blog = () => {
     <div className="pt-16">
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              {t("title")}
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {t("subtitle")}
-            </p>
-          </motion.div>
+          {/* Title + Subtitle */}
+          <Title text={t("title")} subtitle={t("subtitle")} />
 
+          {/* Featured Post */}
           {featuredPost && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -50,10 +44,11 @@ const Blog = () => {
               <div className="bg-white/60 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-200/50 hover:shadow-xl transition-all duration-300 group">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                   <div className="relative h-64 lg:h-auto overflow-hidden">
-                    <img
+                    <Image
                       src={featuredPost.image}
                       alt={featuredPost.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute top-4 left-4 bg-gradient-to-r from-teal-600 to-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
                       {t("featured")}
@@ -70,12 +65,13 @@ const Blog = () => {
                       </span>
                     </div>
 
-                    <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                      {featuredPost.title}
-                    </h2>
-                    <p className="text-gray-600 mb-6 leading-relaxed">
-                      {featuredPost.excerpt}
-                    </p>
+                    <Title
+                      text={featuredPost.title}
+                      as="h2"
+                      align="left"
+                      className="mb-3"
+                    />
+                    <Paragraph text={featuredPost.excerpt} className="mb-6" />
 
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-4">
@@ -107,6 +103,7 @@ const Blog = () => {
             </motion.div>
           )}
 
+          {/* Regular Posts */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {regularPosts.map((post, index) => (
               <motion.article
@@ -117,10 +114,11 @@ const Blog = () => {
                 className="bg-white/60 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-200/50 hover:shadow-xl transition-all duration-300 group"
               >
                 <div className="relative h-48 overflow-hidden">
-                  <img
+                  <Image
                     src={post.image}
                     alt={post.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
                     <span className="text-teal-600 text-sm font-medium">
@@ -130,12 +128,17 @@ const Blog = () => {
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-                    {post.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed line-clamp-3">
-                    {post.excerpt}
-                  </p>
+                  <Title
+                    text={post.title}
+                    as="h2"
+                    align="left"
+                    className="text-xl mb-3 line-clamp-2"
+                  />
+                  <Paragraph
+                    text={post.excerpt}
+                    className="mb-4 leading-relaxed line-clamp-3"
+                    delay={0.1}
+                  />
 
                   <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                     <div className="flex items-center space-x-2">
@@ -149,7 +152,9 @@ const Blog = () => {
                   </div>
 
                   <div className="flex items-center justify-between">
-                    <span className="text-gray-500 text-sm">{post.readTime}</span>
+                    <span className="text-gray-500 text-sm">
+                      {post.readTime}
+                    </span>
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       className="flex items-center space-x-1 text-teal-600 font-semibold hover:text-teal-700 transition-colors"

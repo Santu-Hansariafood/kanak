@@ -1,12 +1,14 @@
 'use client';
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Linkedin, Twitter, Mail } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import dynamic from 'next/dynamic';
-const Title = dynamic(() => import('@/components/common/Title/Title'));
-const Paragraph = dynamic(() => import('@/components/common/Paragraph/Paragraph'));
+import dynamic from "next/dynamic";
+
+const Title = dynamic(() => import("@/components/common/Title/Title"));
+const Paragraph = dynamic(() => import("@/components/common/Paragraph/Paragraph"));
 
 interface TeamMember {
   name: string;
@@ -28,48 +30,42 @@ const Teams: React.FC = () => {
       name: t("members.sarah.name"),
       role: t("members.sarah.role"),
       bio: t("members.sarah.bio"),
-      image:
-        "/teams/gopal.webp",
+      image: "/teams/gopal.webp",
       social: t("members.sarah.social", { returnObjects: true }) as TeamMember["social"],
     },
     {
       name: t("members.michael.name"),
       role: t("members.michael.role"),
       bio: t("members.michael.bio"),
-      image:
-        "/teams/sunita.webp",
+      image: "/teams/sunita.webp",
       social: t("members.michael.social", { returnObjects: true }) as TeamMember["social"],
     },
     {
       name: t("members.emily.name"),
       role: t("members.emily.role"),
       bio: t("members.emily.bio"),
-      image:
-        "/teams/veera.webp",
+      image: "/teams/veera.webp",
       social: t("members.emily.social", { returnObjects: true }) as TeamMember["social"],
     },
     {
       name: t("members.david.name"),
       role: t("members.david.role"),
       bio: t("members.david.bio"),
-      image:
-        "/kanak.jpg",
+      image: "/kanak.jpg",
       social: t("members.david.social", { returnObjects: true }) as TeamMember["social"],
     },
     {
       name: t("members.lisa.name"),
       role: t("members.lisa.role"),
       bio: t("members.lisa.bio"),
-      image:
-        "/kanak.jpg",
+      image: "/kanak.jpg",
       social: t("members.lisa.social", { returnObjects: true }) as TeamMember["social"],
     },
     {
       name: t("members.james.name"),
       role: t("members.james.role"),
       bio: t("members.james.bio"),
-      image:
-        "/kanak.jpg",
+      image: "/kanak.jpg",
       social: t("members.james.social", { returnObjects: true }) as TeamMember["social"],
     },
   ];
@@ -95,22 +91,31 @@ const Teams: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl p-8 border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 group text-center"
               >
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-32 h-32 rounded-full mx-auto object-cover border-4 border-white dark:border-gray-800 shadow-lg mb-6 group-hover:scale-105 transition-transform duration-300"
-                />
+                <div className="w-32 h-32 mx-auto relative mb-6">
+                  <Image
+                    src={member.image}
+                    alt={`${member.name} - ${member.role}`}
+                    width={128}
+                    height={128}
+                    priority={index < 2} // load top 2 faster
+                    className="rounded-full object-cover border-4 border-white dark:border-gray-800 shadow-lg group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+
                 <Title text={member.name} as="h2" align="center" className="mb-2" />
                 <Paragraph
                   text={member.role}
                   className="text-teal-600 dark:text-teal-400 font-semibold mb-4"
                 />
                 <Paragraph text={member.bio} className="mb-6" />
+
                 <div className="flex justify-center space-x-4">
                   {Object.entries(member.social).map(([key, value]) => (
                     <motion.a
                       key={key}
                       href={key === "email" ? `mailto:${value}` : value}
+                      target={key !== "email" ? "_blank" : undefined}
+                      rel={key !== "email" ? "noopener noreferrer" : undefined}
                       whileHover={{ scale: 1.1 }}
                       className="w-10 h-10 bg-gradient-to-r from-teal-600 to-cyan-500 rounded-full flex items-center justify-center text-white hover:shadow-lg transition-all duration-300"
                     >
