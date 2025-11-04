@@ -17,7 +17,6 @@ const Carousel = () => {
     cta: string;
   }[];
 
-  // Handle empty or missing slides gracefully
   if (!Array.isArray(slides) || slides.length === 0) {
     return (
       <div className="flex items-center justify-center h-screen text-gray-500">
@@ -39,7 +38,6 @@ const Carousel = () => {
 
   return (
     <div className="relative h-screen overflow-hidden">
-      {/* Background Image Transition */}
       <AnimatePresence mode="wait">
         <motion.div
           key={currentSlide}
@@ -61,8 +59,6 @@ const Carousel = () => {
           </div>
         </motion.div>
       </AnimatePresence>
-
-      {/* Text Content */}
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="text-center text-white px-4 max-w-4xl">
           <motion.h1
@@ -98,8 +94,6 @@ const Carousel = () => {
           </motion.button>
         </div>
       </div>
-
-      {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
         className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-md text-white p-3 rounded-full hover:bg-white/40 hover:scale-110 transition-all duration-300 shadow-lg"
@@ -113,8 +107,6 @@ const Carousel = () => {
       >
         <ChevronRight className="w-6 h-6" />
       </button>
-
-      {/* Dots */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-3">
         {slides.map((_, index) => (
           <button

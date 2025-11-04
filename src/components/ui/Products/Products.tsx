@@ -1,9 +1,12 @@
-"use client";
+'use client';
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
+import dynamic from 'next/dynamic';
+const Title = dynamic(() => import('@/components/common/Title/Title'));
+const Paragraph = dynamic(() => import('@/components/common/Paragraph/Paragraph'));
 
 interface Product {
   image: string;
@@ -16,6 +19,7 @@ interface Product {
 const Products: React.FC = () => {
   const { t } = useTranslation("products");
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [visibleCount, setVisibleCount] = useState(4);
 
   const products: Product[] = [
     {
@@ -83,27 +87,17 @@ const Products: React.FC = () => {
     },
   ];
 
-  const [visibleCount, setVisibleCount] = useState(4);
-
   return (
-    <div className="pt-16">
+    <div className="pt-16 dark:bg-gray-900 transition-colors">
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              {t("title")}
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {t("subtitle")}
-            </p>
-          </motion.div>
-
-          {/* Product Grid */}
+          <Title
+            text={t("title")}
+            subtitle={t("subtitle")}
+            as="h1"
+            align="center"
+            className="mb-16"
+          />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.slice(0, visibleCount).map((product, index) => (
               <motion.div
@@ -111,7 +105,7 @@ const Products: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-gray-200/50 hover:shadow-xl transition-all duration-300 group cursor-pointer"
+                className="bg-white dark:bg-gray-800/70 backdrop-blur-sm rounded-2xl p-6 border border-gray-200/50 dark:border-gray-700/50 hover:shadow-xl transition-all duration-300 group cursor-pointer"
                 onClick={() => setSelectedProduct(product)}
               >
                 <div className="w-full h-56 rounded-2xl overflow-hidden mb-6">
@@ -123,15 +117,17 @@ const Products: React.FC = () => {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3 text-center">
-                  {product.title}
-                </h3>
-                <p className="text-gray-600 text-center">{product.description}</p>
+
+                <Title
+                  text={product.title}
+                  as="h2"
+                  align="center"
+                  className="mb-3"
+                />
+                <Paragraph text={product.description} className="text-center" />
               </motion.div>
             ))}
           </div>
-
-          {/* Show More Button */}
           {visibleCount < products.length && (
             <div className="text-center mt-10">
               <motion.button
@@ -140,14 +136,12 @@ const Products: React.FC = () => {
                 onClick={() => setVisibleCount(products.length)}
                 className="bg-gradient-to-r from-teal-600 to-cyan-500 text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300"
               >
-                Show More
+                {t("showMore") || "Show More"}
               </motion.button>
             </div>
           )}
         </div>
       </section>
-
-      {/* Popup Modal */}
       <AnimatePresence>
         {selectedProduct && (
           <motion.div
@@ -158,7 +152,7 @@ const Products: React.FC = () => {
             onClick={() => setSelectedProduct(null)}
           >
             <motion.div
-              className="bg-white rounded-2xl p-8 max-w-4xl w-full relative"
+              className="bg-white dark:bg-gray-800 rounded-2xl p-8 max-w-4xl w-full relative"
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
@@ -167,10 +161,11 @@ const Products: React.FC = () => {
             >
               <button
                 onClick={() => setSelectedProduct(null)}
-                className="absolute top-3 right-4 text-gray-600 hover:text-gray-800 text-2xl font-bold"
+                className="absolute top-3 right-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white text-2xl font-bold"
               >
                 &times;
               </button>
+
               <div className="flex flex-col md:flex-row gap-6">
                 <div className="w-full md:w-1/2">
                   <Image
@@ -181,23 +176,27 @@ const Products: React.FC = () => {
                     className="rounded-2xl object-cover w-full h-80"
                   />
                 </div>
-                <div className="w-full md:w-1/2">
-                  <h2 className="text-3xl font-bold text-gray-900 mb-3">
-                    {selectedProduct.title}
-                  </h2>
-                  <p className="text-gray-600 mb-4">
-                    {selectedProduct.description}
-                  </p>
-                  <h4 className="font-semibold text-gray-900 mb-2">
-                    {t("keyFeatures")}
-                  </h4>
 
-                  {/* Two-column features list */}
+                <div className="w-full md:w-1/2">
+                  <Title
+                    text={selectedProduct.title}
+                    as="h2"
+                    align="left"
+                    className="mb-3"
+                  />
+                  <Paragraph text={selectedProduct.description} className="mb-4" />
+
+                  <Title
+                    text={t("keyFeatures")}
+                    as="h2"
+                    align="left"
+                    className="mb-2 text-xl sm:text-2xl"
+                  />
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-4">
                     {selectedProduct.features.map((feature, idx) => (
                       <div
                         key={idx}
-                        className="flex items-center text-gray-600 text-sm"
+                        className="flex items-center text-gray-600 dark:text-gray-300 text-sm"
                       >
                         <div className="w-2 h-2 bg-teal-500 rounded-full mr-2" />
                         {feature}
@@ -205,9 +204,10 @@ const Products: React.FC = () => {
                     ))}
                   </div>
 
-                  <p className="text-lg font-semibold text-teal-600 mt-4">
-                    {selectedProduct.price}
-                  </p>
+                  <Paragraph
+                    text={selectedProduct.price}
+                    className="text-lg font-semibold text-teal-600 mt-4"
+                  />
                 </div>
               </div>
             </motion.div>

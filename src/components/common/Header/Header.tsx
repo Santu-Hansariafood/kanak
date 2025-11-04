@@ -69,9 +69,6 @@ const Header = () => {
                 className="object-cover"
               />
             </div>
-            {/* <span className="text-xl font-bold text-teal-700 tracking-wide hidden sm:block">
-              Kanak
-            </span> */}
           </Link>
 
           <div className="hidden md:flex items-center space-x-2">

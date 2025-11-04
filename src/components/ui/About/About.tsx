@@ -4,6 +4,9 @@ import "@/lib/i18n/client";
 import { motion } from 'framer-motion';
 import { Target, Eye, Heart, Zap } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import dynamic from 'next/dynamic';
+const Title = dynamic(() => import('@/components/common/Title/Title'));
+const Paragraph = dynamic(() => import('@/components/common/Paragraph/Paragraph'));
 
 interface ValueItem {
   icon: React.ElementType;
@@ -38,38 +41,32 @@ const About: React.FC = () => {
   ];
 
   return (
-    <div className="pt-16">
+    <div className="pt-16 bg-white dark:bg-gray-900 transition-colors duration-300">
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              {t('about.title')}
-            </h1>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              {t('about.subtitle')}
-            </p>
-          </motion.div>
-
+          <Title
+            text={t('about.title')}
+            subtitle={t('about.subtitle')}
+            as="h1"
+            align="center"
+          />
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                {t('about.story.title')}
-              </h2>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                {t('about.story.paragraph1')}
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                {t('about.story.paragraph2')}
-              </p>
+              <Title
+                text={t('about.story.title')}
+                as="h2"
+                align="left"
+                className="mb-6"
+              />
+              <Paragraph
+                text={t('about.story.paragraph1')}
+                className="mb-6"
+              />
+              <Paragraph text={t('about.story.paragraph2')} />
             </motion.div>
 
             <motion.div
@@ -79,13 +76,12 @@ const About: React.FC = () => {
               className="relative"
             >
               <img
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
                 alt="Team collaboration"
-                className="rounded-2xl shadow-2xl"
+                className="rounded-2xl shadow-2xl object-cover w-full"
               />
             </motion.div>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <motion.div
@@ -93,15 +89,15 @@ const About: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-gray-200/50 hover:shadow-xl transition-all duration-300 text-center"
+                className="bg-white/70 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl p-8 border border-gray-200/50 dark:border-gray-700 hover:shadow-xl transition-all duration-300 text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-teal-600 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <value.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
                   {value.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">{value.desc}</p>
+                <Paragraph text={value.desc} />
               </motion.div>
             ))}
           </div>

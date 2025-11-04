@@ -1,9 +1,12 @@
-"use client";
+'use client';
 
 import React from "react";
 import { motion } from "framer-motion";
 import { Linkedin, Twitter, Mail } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import dynamic from 'next/dynamic';
+const Title = dynamic(() => import('@/components/common/Title/Title'));
+const Paragraph = dynamic(() => import('@/components/common/Paragraph/Paragraph'));
 
 interface TeamMember {
   name: string;
@@ -75,19 +78,13 @@ const Teams: React.FC = () => {
     <div className="pt-16">
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              {t("title")}
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {t("subtitle")}
-            </p>
-          </motion.div>
+          <Title
+            text={t("title")}
+            subtitle={t("subtitle")}
+            as="h1"
+            align="center"
+            className="mb-16"
+          />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
@@ -96,23 +93,19 @@ const Teams: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-gray-200/50 hover:shadow-xl transition-all duration-300 group text-center"
+                className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl p-8 border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 group text-center"
               >
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-32 h-32 rounded-full mx-auto object-cover border-4 border-white shadow-lg mb-6 group-hover:scale-105 transition-transform duration-300"
+                  className="w-32 h-32 rounded-full mx-auto object-cover border-4 border-white dark:border-gray-800 shadow-lg mb-6 group-hover:scale-105 transition-transform duration-300"
                 />
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                  {member.name}
-                </h3>
-                <p className="text-teal-600 font-semibold mb-4">
-                  {member.role}
-                </p>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  {member.bio}
-                </p>
-
+                <Title text={member.name} as="h2" align="center" className="mb-2" />
+                <Paragraph
+                  text={member.role}
+                  className="text-teal-600 dark:text-teal-400 font-semibold mb-4"
+                />
+                <Paragraph text={member.bio} className="mb-6" />
                 <div className="flex justify-center space-x-4">
                   {Object.entries(member.social).map(([key, value]) => (
                     <motion.a

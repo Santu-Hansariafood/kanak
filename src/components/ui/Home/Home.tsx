@@ -7,6 +7,8 @@ import { ArrowRight, Star, Users, Globe, Award } from 'lucide-react';
 
 import Carousel from "@/components/ui/Carousel/Carousel";
 import CookieConsent from '@/components/ui/CookieConsent/CookieConsent';
+import Title from '@/components/common/Title/Title'; // ← imported reusable Title
+import Paragraph from '@/components/common/Paragraph/Paragraph'; // ← imported reusable Paragraph
 
 const Home = () => {
   const { t } = useTranslation("home");
@@ -16,12 +18,14 @@ const Home = () => {
     title: string;
     desc: string;
   }[];
+
   const icons: Record<string, React.ElementType> = {
     Star,
     Users,
     Globe,
     Award,
   };
+
   const fallbackFeatures = [
     { icon: 'Star', title: 'Excellence', desc: 'Delivering top-quality solutions that exceed expectations' },
     { icon: 'Users', title: 'Expert Team', desc: 'Skilled professionals dedicated to your success' },
@@ -35,20 +39,14 @@ const Home = () => {
     <div className="overflow-hidden relative">
       <Carousel />
       <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              {t('home.whyChoose.title', 'Why Choose Us')}
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {t('home.whyChoose.subtitle', 'We deliver excellence with every project.')}
-            </p>
-          </motion.div>
+        <div className="max-w-7xl mx-auto text-center">
+          <Title
+            as="h2"
+            text={t('home.whyChoose.title', 'Why Choose Us')}
+            subtitle={t('home.whyChoose.subtitle', 'We deliver excellence with every project.')}
+            align="center"
+            className="mb-16"
+          />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {featuresToUse.map((feature, index) => {
@@ -65,7 +63,7 @@ const Home = () => {
                     <Icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.desc}</p>
+                  <Paragraph text={feature.desc} className="text-gray-600" />
                 </motion.div>
               );
             })}
@@ -79,12 +77,14 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              {t('home.cta.title', 'Ready to Get Started?')}
-            </h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              {t('home.cta.subtitle', 'Join us and take your business to the next level.')}
-            </p>
+            <Title
+              as="h2"
+              text={t('home.cta.title', 'Ready to Get Started?')}
+              subtitle={t('home.cta.subtitle', 'Join us and take your business to the next level.')}
+              align="center"
+              className="text-white mb-8"
+            />
+
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -96,6 +96,7 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
+
       <CookieConsent />
     </div>
   );
