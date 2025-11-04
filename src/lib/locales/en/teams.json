@@ -33,33 +33,33 @@
       }
     },
     "david": {
-      "name": "David Patel",
-      "role": "CTO",
-      "bio": "David leads technology and innovation at Kanak Retail.",
+      "name": "S Vimal Kumar",
+      "role": "Business Head - Tamil Nadu ",
+      "bio": "S Vimal Kumar leads technology and innovation at Kanak Retail.",
       "social": {
-        "linkedin": "https://www.linkedin.com/in/davidpatel",
-        "twitter": "https://twitter.com/davidpatel",
-        "email": "david@kanakretail.com"
+        "linkedin": "https://www.linkedin.com/in/svimalkumar",
+        "twitter": "https://twitter.com/svimalkumar",
+        "email": "s.vimal@kanakretail.com"
       }
     },
     "lisa": {
-      "name": "Lisa Thomas",
-      "role": "HR Manager",
-      "bio": "Lisa fosters a culture of collaboration and growth.",
+      "name": "Arun A",
+      "role": "Area Sales Manager - Chennai HQ",
+      "bio": "Arun A fosters a culture of collaboration and growth.",
       "social": {
-        "linkedin": "https://www.linkedin.com/in/lisathomas",
-        "twitter": "https://twitter.com/lisathomas",
-        "email": "lisa@kanakretail.com"
+        "linkedin": "https://www.linkedin.com/in/aruna",
+        "twitter": "https://twitter.com/aruna",
+        "email": "aruna.a@kanakretail.com"
       }
     },
     "james": {
-      "name": "James Anderson",
-      "role": "Finance Director",
-      "bio": "James ensures financial integrity and operational efficiency.",
+      "name": "V Saravana Kumar",
+      "role": "Institutional Sales Head (Tamil Nadu)",
+      "bio": "V Saravana Kumar ensures financial integrity and operational efficiency.",
       "social": {
-        "linkedin": "https://www.linkedin.com/in/jamesanderson",
-        "twitter": "https://twitter.com/jamesanderson",
-        "email": "james@kanakretail.com"
+        "linkedin": "https://www.linkedin.com/in/vsaravanakumar",
+        "twitter": "https://twitter.com/vsaravanakumar",
+        "email": "v.saravana@kanakretail.com"
       }
     }
   }

@@ -4,11 +4,12 @@ import "@/lib/i18n/client";
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { ArrowRight, Star, Users, Globe, Award } from 'lucide-react';
+import dynamic from 'next/dynamic';
 
-import Carousel from "@/components/ui/Carousel/Carousel";
-import CookieConsent from '@/components/ui/CookieConsent/CookieConsent';
-import Title from '@/components/common/Title/Title'; // ← imported reusable Title
-import Paragraph from '@/components/common/Paragraph/Paragraph'; // ← imported reusable Paragraph
+const Carousel = dynamic(() => import("@/components/ui/Carousel/Carousel"));
+const CookieConsent = dynamic(() => import('@/components/ui/CookieConsent/CookieConsent'));
+const Title = dynamic(() => import('@/components/common/Title/Title'));
+const Paragraph = dynamic(() => import('@/components/common/Paragraph/Paragraph'));
 
 const Home = () => {
   const { t } = useTranslation("home");
@@ -86,13 +87,20 @@ const Home = () => {
             />
 
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-white text-teal-600 px-8 py-4 rounded-full font-semibold text-lg flex items-center space-x-2 mx-auto hover:shadow-lg transition-all duration-300"
-            >
-              <span>{t('home.cta.button', 'Get Started')}</span>
-              <ArrowRight className="w-5 h-5" />
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => {
+                    const link = document.createElement('a');
+                    link.href = '/download/kanak_retail.pdf';
+                    link.download = 'kanakretail.pdf';
+                    link.click();
+                  }}
+                  className="bg-white text-teal-600 px-8 py-4 rounded-full font-semibold text-lg flex items-center space-x-2 mx-auto hover:shadow-lg transition-all duration-300"
+                >
+                  <span>{t('home.cta.button', 'Explore Our Product')}</span>
+                  <ArrowRight className="w-5 h-5" />
             </motion.button>
+
           </motion.div>
         </div>
       </section>

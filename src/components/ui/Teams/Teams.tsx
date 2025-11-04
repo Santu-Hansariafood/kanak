@@ -29,7 +29,7 @@ const Teams: React.FC = () => {
       role: t("members.sarah.role"),
       bio: t("members.sarah.bio"),
       image:
-        "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=400&q=80",
+        "/teams/gopal.webp",
       social: t("members.sarah.social", { returnObjects: true }) as TeamMember["social"],
     },
     {
@@ -37,7 +37,7 @@ const Teams: React.FC = () => {
       role: t("members.michael.role"),
       bio: t("members.michael.bio"),
       image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80",
+        "/teams/sunita.webp",
       social: t("members.michael.social", { returnObjects: true }) as TeamMember["social"],
     },
     {
@@ -45,7 +45,7 @@ const Teams: React.FC = () => {
       role: t("members.emily.role"),
       bio: t("members.emily.bio"),
       image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&q=80",
+        "/teams/veera.webp",
       social: t("members.emily.social", { returnObjects: true }) as TeamMember["social"],
     },
     {
@@ -53,7 +53,7 @@ const Teams: React.FC = () => {
       role: t("members.david.role"),
       bio: t("members.david.bio"),
       image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
+        "/kanak.jpg",
       social: t("members.david.social", { returnObjects: true }) as TeamMember["social"],
     },
     {
@@ -61,7 +61,7 @@ const Teams: React.FC = () => {
       role: t("members.lisa.role"),
       bio: t("members.lisa.bio"),
       image:
-        "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=400&q=80",
+        "/kanak.jpg",
       social: t("members.lisa.social", { returnObjects: true }) as TeamMember["social"],
     },
     {
@@ -69,7 +69,7 @@ const Teams: React.FC = () => {
       role: t("members.james.role"),
       bio: t("members.james.bio"),
       image:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80",
+        "/kanak.jpg",
       social: t("members.james.social", { returnObjects: true }) as TeamMember["social"],
     },
   ];

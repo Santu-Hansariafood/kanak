@@ -1,12 +1,66 @@
 {
-  "title": "మా బృందాన్ని కలవండి",
-  "subtitle": "వితార విజయానికి వెనుక ఉన్న అభిరుచి గల వ్యక్తులు.",
+  "title": "మా బృందాన్ని కలుసుకోండి",
+  "subtitle": "కనక్ రీటైల్ అత్యుత్తమత వెనుక ఉన్న ఉత్సాహభరిత వ్యక్తులు.",
   "members": {
-    "sarah": { "name": "సారా జాన్సన్", "role": "ప్రధాన కార్యనిర్వాహణ అధికారి", "bio": "సారా ఆవిష్కరణ మరియు దృష్టితో సంస్థను నడిపిస్తుంది." },
-    "michael": { "name": "మైఖేల్ చెన్", "role": "మార్కెటింగ్ అధిపతి", "bio": "మైఖేల్ సృజనాత్మకత ద్వారా బ్రాండ్‌లను కస్టమర్లతో కలుపుతాడు." },
-    "emily": { "name": "ఎమిలీ డేవిస్", "role": "ఉత్పత్తి డిజైనర్", "bio": "ఎమిలీ నమ్మకాన్ని మరియు ఆనందాన్ని కలిగించే అనుభవాలను రూపొందిస్తుంది." },
-    "david": { "name": "డేవిడ్ పటేల్", "role": "సాంకేతిక అధిపతి", "bio": "డేవిడ్ వితారాలో సాంకేతికత మరియు ఆవిష్కరణకు నాయకత్వం వహిస్తాడు." },
-    "lisa": { "name": "లీసా థామస్", "role": "హ్యూమన్ రిసోర్సెస్ మేనేజర్", "bio": "లీసా సహకారం మరియు అభివృద్ధి సాంస్కృతికాన్ని పెంచుతుంది." },
-    "james": { "name": "జేమ్స్ ఆండర్సన్", "role": "ఫైనాన్స్ డైరెక్టర్", "bio": "జేమ్స్ ఆర్థిక సమగ్రత మరియు సమర్థతను నిర్ధారిస్తాడు." }
+    "sarah": {
+      "name": "గోపాల్ అగర్వాల్",
+      "role": "ముఖ్య నిర్వాహక అధికారి",
+      "bio": "గోపాల్ సృజనాత్మకత మరియు దృష్టితో సంస్థను నడిపిస్తున్నారు.",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/gopalagarwal",
+        "twitter": "https://twitter.com/gopalagarwal",
+        "email": "gopal@hansariafood.com"
+      }
+    },
+    "michael": {
+      "name": "సునీత అగర్వాలా",
+      "role": "ముఖ్య నిర్వాహక అధికారి",
+      "bio": "సునీత సృజనాత్మకత మరియు దృష్టితో సంస్థను నడిపిస్తున్నారు.",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/sunitaagarwalla",
+        "twitter": "https://twitter.com/sunitaagarwalla",
+        "email": "sunita@hansariafood.com"
+      }
+    },
+    "emily": {
+      "name": "వీరపాండియన్ ఎన్ఆర్",
+      "role": "అధ్యక్షుడు",
+      "bio": "వీరపాండియన్ ఎన్ఆర్ ఒక దూరదృష్టి నాయకుడు.",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/veerapandian",
+        "twitter": "https://twitter.com/veerapandian",
+        "email": "veera@hansariafood.com"
+      }
+    },
+    "david": {
+      "name": "ఎస్ విమల్ కుమార్",
+      "role": "బిజినెస్ హెడ్ - తమిళనాడు",
+      "bio": "ఎస్ విమల్ కుమార్ సాంకేతికత మరియు ఆవిష్కరణను నడిపిస్తున్నారు.",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/svimalkumar",
+        "twitter": "https://twitter.com/svimalkumar",
+        "email": "s.vimal@kanakretail.com"
+      }
+    },
+    "lisa": {
+      "name": "అరుణ్ ఎ",
+      "role": "ప్రాంతీయ విక్రయాల మేనేజర్ - చెన్నై ప్రధాన కార్యాలయం",
+      "bio": "అరుణ్ ఎ సహకారం మరియు అభివృద్ధి సంస్కృతిని పెంచుతారు.",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/aruna",
+        "twitter": "https://twitter.com/aruna",
+        "email": "aruna.a@kanakretail.com"
+      }
+    },
+    "james": {
+      "name": "వి సర్వణ కుమార్",
+      "role": "ఇన్స్టిట్యూషనల్ సేల్స్ హెడ్ (తమిళనాడు)",
+      "bio": "వి సర్వణ కుమార్ ఆర్థిక నైతికత మరియు ఆపరేషనల్ సామర్థ్యాన్ని నిర్ధారిస్తారు.",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/vsaravanakumar",
+        "twitter": "https://twitter.com/vsaravanakumar",
+        "email": "v.saravana@kanakretail.com"
+      }
+    }
   }
 }

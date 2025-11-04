@@ -1,12 +1,66 @@
 {
   "title": "हमारी टीम से मिलें",
-  "subtitle": "वितारा की सफलता के पीछे जुनूनी लोग।",
+  "subtitle": "कनाक रिटेल उत्कृष्टता के पीछे जुनूनी लोग।",
   "members": {
-    "sarah": { "name": "सारा जॉनसन", "role": "मुख्य कार्यकारी अधिकारी", "bio": "सारा नवाचार और दृष्टिकोण के साथ कंपनी का नेतृत्व करती हैं।" },
-    "michael": { "name": "माइकल चेन", "role": "मार्केटिंग प्रमुख", "bio": "माइकल रचनात्मकता के माध्यम से ब्रांड को ग्राहकों से जोड़ते हैं।" },
-    "emily": { "name": "एमिली डेविस", "role": "उत्पाद डिज़ाइनर", "bio": "एमिली उपयोगकर्ता अनुभवों को प्रेरित करती हैं जो भरोसेमंद और आनंददायक हैं।" },
-    "david": { "name": "डेविड पटेल", "role": "मुख्य तकनीकी अधिकारी", "bio": "डेविड वितारा में प्रौद्योगिकी और नवाचार का नेतृत्व करते हैं।" },
-    "lisa": { "name": "लिसा थॉमस", "role": "मानव संसाधन प्रबंधक", "bio": "लिसा सहयोग और विकास की संस्कृति को बढ़ावा देती हैं।" },
-    "james": { "name": "जेम्स एंडरसन", "role": "वित्त निदेशक", "bio": "जेम्स वित्तीय अखंडता और दक्षता सुनिश्चित करते हैं।" }
+    "sarah": {
+      "name": "गोपाल अग्रवाल",
+      "role": "मुख्य कार्यकारी अधिकारी",
+      "bio": "गोपाल नवाचार और दृष्टि के साथ कंपनी का नेतृत्व करते हैं।",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/gopalagarwal",
+        "twitter": "https://twitter.com/gopalagarwal",
+        "email": "gopal@hansariafood.com"
+      }
+    },
+    "michael": {
+      "name": "सुनीता अग्रवाला",
+      "role": "मुख्य कार्यकारी अधिकारी",
+      "bio": "सुनीता नवाचार और दृष्टि के साथ कंपनी का नेतृत्व करती हैं।",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/sunitaagarwalla",
+        "twitter": "https://twitter.com/sunitaagarwalla",
+        "email": "sunita@hansariafood.com"
+      }
+    },
+    "emily": {
+      "name": "वीरापांडियन एन.आर.",
+      "role": "अध्यक्ष",
+      "bio": "वीरापांडियन एन.आर. एक दूरदर्शी नेता हैं।",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/veerapandian",
+        "twitter": "https://twitter.com/veerapandian",
+        "email": "veera@hansariafood.com"
+      }
+    },
+    "david": {
+      "name": "एस. विमल कुमार",
+      "role": "बिजनेस हेड - तमिलनाडु",
+      "bio": "एस. विमल कुमार तकनीक और नवाचार का नेतृत्व करते हैं।",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/svimalkumar",
+        "twitter": "https://twitter.com/svimalkumar",
+        "email": "s.vimal@kanakretail.com"
+      }
+    },
+    "lisa": {
+      "name": "अरुण ए",
+      "role": "क्षेत्रीय बिक्री प्रबंधक - चेन्नई मुख्यालय",
+      "bio": "अरुण ए सहयोग और विकास की संस्कृति को बढ़ावा देते हैं।",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/aruna",
+        "twitter": "https://twitter.com/aruna",
+        "email": "aruna.a@kanakretail.com"
+      }
+    },
+    "james": {
+      "name": "वी. सरवना कुमार",
+      "role": "संस्थागत बिक्री प्रमुख (तमिलनाडु)",
+      "bio": "वी. सरवना कुमार वित्तीय अखंडता और परिचालन दक्षता सुनिश्चित करते हैं।",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/vsaravanakumar",
+        "twitter": "https://twitter.com/vsaravanakumar",
+        "email": "v.saravana@kanakretail.com"
+      }
+    }
   }
 }
