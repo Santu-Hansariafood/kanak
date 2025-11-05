@@ -1,9 +1,13 @@
-import Blog from '@/components/ui/Blog/Blog'
-import React from 'react'
+"use client"
+import React, { Suspense } from 'react'
+import dynamic from 'next/dynamic'
+const Blog = dynamic(() => import('@/components/ui/Blog/Blog'))
 
 const page = () => {
   return (
-    <Blog />
+    <Suspense fallback={<div>Loading...</div>}>
+      <Blog />
+    </Suspense>
   )
 }
 

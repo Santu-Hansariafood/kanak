@@ -1,9 +1,13 @@
-import Teams from '@/components/ui/Teams/Teams'
-import React from 'react'
+"use client"
+import React, { Suspense } from 'react'
+import dynamic from 'next/dynamic'
+const Teams = dynamic(() => import('@/components/ui/Teams/Teams'))
 
 const page = () => {
   return (
-    <Teams />
+    <Suspense fallback={<div>Loading...</div>}>
+      <Teams />
+    </Suspense>
   )
 }
 

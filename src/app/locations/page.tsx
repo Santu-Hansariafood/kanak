@@ -1,9 +1,12 @@
-import Locations from '@/components/ui/Locations/Locations'
-import React from 'react'
-
+"use client"
+import dynamic from 'next/dynamic'
+import { Suspense } from 'react'
+const Locations = dynamic(() => import('@/components/ui/Locations/Locations'))
 const page = () => {
   return (
-    <Locations />
+    <Suspense fallback={<div>Loading...</div>}>
+      <Locations />
+    </Suspense>
   )
 }
 

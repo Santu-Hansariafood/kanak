@@ -25,7 +25,7 @@ const Carousel = () => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
     return () => clearInterval(timer);
-  }, [slides?.length]);
+  }, [slides]);
 
   if (!slides || slides.length === 0) {
     return (

@@ -1,10 +1,15 @@
-import Home from '@/components/ui/Home/Home'
-import React from 'react'
+"use client"
+
+import dynamic from 'next/dynamic'
+import React, { Suspense } from 'react'
+const Home = dynamic(() => import('@/components/ui/Home/Home'))
 
 const page = () => {
   return (
-    <Home />
+    <Suspense fallback={<div>Loading...</div>}>
+      <Home />
+    </Suspense>
   )
 }
 
-export default page
+export default page;
