@@ -3,28 +3,15 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Calendar, User, ArrowRight } from "lucide-react";
-import { useTranslation } from "react-i18next";
 import Image from "next/image";
 import dynamic from "next/dynamic";
+import { useBlogPosts } from "@/hooks/Blog/useBlogPosts";
+
 const Title = dynamic(() => import("@/components/common/Title/Title"));
 const Paragraph = dynamic(() => import("@/components/common/Paragraph/Paragraph"));
 
 const Blog = () => {
-  const { t } = useTranslation("blog");
-
-  const blogPosts = t("posts", { returnObjects: true }) as Array<{
-    title: string;
-    excerpt: string;
-    author: string;
-    date: string;
-    readTime: string;
-    category: string;
-    image: string;
-    featured: boolean;
-  }>;
-
-  const featuredPost = blogPosts.find((post) => post.featured);
-  const regularPosts = blogPosts.filter((post) => !post.featured);
+  const { t, featuredPost, regularPosts } = useBlogPosts();
 
   return (
     <div className="pt-16">

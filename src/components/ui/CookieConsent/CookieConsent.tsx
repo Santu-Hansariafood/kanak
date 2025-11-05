@@ -1,30 +1,14 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import "@/lib/i18n/client";
 import { motion, AnimatePresence } from 'framer-motion';
 import { Cookie, X, Check } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { useCookieConsent } from '@/hooks/CookieConsent/useCookieConsent';
 
 const CookieConsent = () => {
   const { t } = useTranslation("cookie");
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const consent = localStorage.getItem('cookieConsent');
-    if (!consent) {
-      setTimeout(() => setIsVisible(true), 1000);
-    }
-  }, []);
-
-  const handleAccept = () => {
-    localStorage.setItem('cookieConsent', 'accepted');
-    setIsVisible(false);
-  };
-
-  const handleDecline = () => {
-    localStorage.setItem('cookieConsent', 'declined');
-    setIsVisible(false);
-  };
+  const { isVisible, acceptCookies, declineCookies } = useCookieConsent();
 
   return (
     <AnimatePresence>
@@ -53,11 +37,12 @@ const CookieConsent = () => {
                     'We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.'
                   )}
                 </p>
+
                 <div className="flex flex-col sm:flex-row gap-3">
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    onClick={handleAccept}
+                    onClick={acceptCookies}
                     className="flex-1 bg-gradient-to-r from-teal-600 to-cyan-500 text-white px-4 py-2.5 rounded-lg font-medium text-sm flex items-center justify-center space-x-2 hover:shadow-lg transition-all duration-300"
                   >
                     <Check className="w-4 h-4" />
@@ -67,7 +52,7 @@ const CookieConsent = () => {
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    onClick={handleDecline}
+                    onClick={declineCookies}
                     className="flex-1 bg-gray-100 text-gray-700 px-4 py-2.5 rounded-lg font-medium text-sm flex items-center justify-center space-x-2 hover:bg-gray-200 transition-all duration-300"
                   >
                     <X className="w-4 h-4" />

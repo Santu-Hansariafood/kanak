@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useEffect, ReactNode } from "react";
+import React, { ReactNode } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
+import { useModalEffect } from "@/hooks/Modal/useModalEffect";
 
 interface ModalProps {
   isOpen: boolean;
@@ -12,26 +13,13 @@ interface ModalProps {
 }
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
-  useEffect(() => {
-    const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
-    };
-
-    if (isOpen) {
-      document.addEventListener("keydown", handleEscape);
-      document.body.style.overflow = "hidden";
-    }
-
-    return () => {
-      document.removeEventListener("keydown", handleEscape);
-      document.body.style.overflow = "unset";
-    };
-  }, [isOpen, onClose]);
+  useModalEffect(isOpen, onClose);
 
   return (
     <AnimatePresence>
       {isOpen && (
         <>
+          {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -40,6 +28,8 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
             onClick={onClose}
             className="fixed inset-0 z-50 bg-slate-900/80 backdrop-blur-md"
           />
+
+          {/* Modal Container */}
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none">
             <motion.div
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
@@ -50,9 +40,12 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="relative bg-gradient-to-br from-white/95 via-white/90 to-white/95 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/20 overflow-hidden">
+                {/* Background gradients */}
                 <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 via-transparent to-cyan-500/5 pointer-events-none" />
                 <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-teal-400/10 to-cyan-400/10 rounded-full blur-3xl pointer-events-none" />
                 <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-cyan-400/10 to-teal-400/10 rounded-full blur-3xl pointer-events-none" />
+
+                {/* Header */}
                 <div className="relative border-b border-gray-200/50 bg-gradient-to-r from-slate-50/80 to-white/80 backdrop-blur-sm">
                   <div className="flex items-center justify-between p-6">
                     <h2 className="text-3xl font-bold bg-gradient-to-r from-slate-800 via-slate-700 to-slate-800 bg-clip-text text-transparent">
@@ -72,6 +65,8 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
                     </motion.button>
                   </div>
                 </div>
+
+                {/* Body */}
                 <div className="relative overflow-y-auto max-h-[calc(85vh-120px)] p-8">
                   <div className="prose prose-slate max-w-none">{children}</div>
                 </div>

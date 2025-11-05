@@ -1,45 +1,27 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "@/lib/i18n/client";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
+import { useCarousel } from "@/hooks/Carousel/useCarousel";
 
 const Carousel = () => {
   const { t } = useTranslation("carousel");
-  const [currentSlide, setCurrentSlide] = useState(0);
-
   const slides = t("carousel.slides", { returnObjects: true }) as
-    | {
-        title: string;
-        subtitle: string;
-        image: string;
-        cta: string;
-      }[]
+    | { title: string; subtitle: string; image: string; cta: string }[]
     | undefined;
 
-  useEffect(() => {
-    if (!slides || slides.length === 0) return;
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [slides]);
+  const { currentSlide, current, nextSlide, prevSlide, goToSlide } = useCarousel(slides, 5000);
 
-  if (!slides || slides.length === 0) {
+  if (!slides || slides.length === 0 || !current) {
     return (
       <div className="flex items-center justify-center h-screen text-gray-500">
         No slides available.
       </div>
     );
   }
-
-  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
-  const prevSlide = () =>
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-
-  const current = slides[currentSlide];
 
   return (
     <div className="relative h-screen overflow-hidden">
@@ -100,6 +82,7 @@ const Carousel = () => {
           </motion.button>
         </div>
       </div>
+
       <button
         onClick={prevSlide}
         className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-md text-white p-3 rounded-full hover:bg-white/40 hover:scale-110 transition-all duration-300 shadow-lg"
@@ -118,7 +101,7 @@ const Carousel = () => {
         {slides.map((_, index) => (
           <button
             key={index}
-            onClick={() => setCurrentSlide(index)}
+            onClick={() => goToSlide(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 hover:scale-125 ${
               index === currentSlide ? "bg-white w-8" : "bg-white/50"
             }`}

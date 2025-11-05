@@ -4,44 +4,14 @@ import React from 'react';
 import "@/lib/i18n/client";
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Target, Eye, Heart, Zap } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
 import dynamic from 'next/dynamic';
+import { useAboutValues } from '@/hooks/About/useAboutValues';
 
 const Title = dynamic(() => import('@/components/common/Title/Title'));
 const Paragraph = dynamic(() => import('@/components/common/Paragraph/Paragraph'));
 
-interface ValueItem {
-  icon: React.ElementType;
-  title: string;
-  desc: string;
-}
-
 const About: React.FC = () => {
-  const { t } = useTranslation("about");
-
-  const values: ValueItem[] = [
-    {
-      icon: Target,
-      title: t('about.values.mission.title'),
-      desc: t('about.values.mission.desc'),
-    },
-    {
-      icon: Eye,
-      title: t('about.values.vision.title'),
-      desc: t('about.values.vision.desc'),
-    },
-    {
-      icon: Heart,
-      title: t('about.values.passion.title'),
-      desc: t('about.values.passion.desc'),
-    },
-    {
-      icon: Zap,
-      title: t('about.values.innovation.title'),
-      desc: t('about.values.innovation.desc'),
-    },
-  ];
+  const { values, t } = useAboutValues();
 
   return (
     <div className="pt-16 bg-white dark:bg-gray-900 transition-colors duration-300">
@@ -68,6 +38,7 @@ const About: React.FC = () => {
               <Paragraph text={t('about.story.paragraph1')} className="mb-6" />
               <Paragraph text={t('about.story.paragraph2')} />
             </motion.div>
+
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}

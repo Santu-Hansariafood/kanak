@@ -2,9 +2,9 @@
 import React from 'react';
 import "@/lib/i18n/client";
 import { motion } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
-import { ArrowRight, Star, Users, Globe, Award } from 'lucide-react';
 import dynamic from 'next/dynamic';
+import { ArrowRight } from 'lucide-react';
+import { useHomeContent } from '@/hooks/Home/useHomeContent';
 
 const Carousel = dynamic(() => import("@/components/ui/Carousel/Carousel"));
 const CookieConsent = dynamic(() => import('@/components/ui/CookieConsent/CookieConsent'));
@@ -12,46 +12,27 @@ const Title = dynamic(() => import('@/components/common/Title/Title'));
 const Paragraph = dynamic(() => import('@/components/common/Paragraph/Paragraph'));
 
 const Home = () => {
-  const { t } = useTranslation("home");
-
-  const features = t('home.features', { returnObjects: true }) as {
-    icon: string;
-    title: string;
-    desc: string;
-  }[];
-
-  const icons: Record<string, React.ElementType> = {
-    Star,
-    Users,
-    Globe,
-    Award,
-  };
-
-  const fallbackFeatures = [
-    { icon: 'Star', title: 'Excellence', desc: 'Delivering top-quality solutions that exceed expectations' },
-    { icon: 'Users', title: 'Expert Team', desc: 'Skilled professionals dedicated to your success' },
-    { icon: 'Globe', title: 'Global Reach', desc: 'Serving clients worldwide with 24/7 support' },
-    { icon: 'Award', title: 'Award Winning', desc: 'Recognized for innovation and customer satisfaction' },
-  ];
-
-  const featuresToUse = Array.isArray(features) && features.length > 0 ? features : fallbackFeatures;
+  const { icons, featuresToUse, cta, whyChoose } = useHomeContent();
 
   return (
     <div className="overflow-hidden relative">
+      {/* Hero Section */}
       <Carousel />
+
+      {/* Features Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <Title
             as="h2"
-            text={t('home.whyChoose.title', 'Why Choose Us')}
-            subtitle={t('home.whyChoose.subtitle', 'We deliver excellence with every project.')}
+            text={whyChoose.title}
+            subtitle={whyChoose.subtitle}
             align="center"
             className="mb-16"
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {featuresToUse.map((feature, index) => {
-              const Icon = icons[feature.icon] || Star;
+              const Icon = icons[feature.icon] || icons.Star;
               return (
                 <motion.div
                   key={index}
@@ -71,6 +52,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-teal-600 to-cyan-500">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
@@ -80,27 +63,26 @@ const Home = () => {
           >
             <Title
               as="h2"
-              text={t('home.cta.title', 'Ready to Get Started?')}
-              subtitle={t('home.cta.subtitle', 'Join us and take your business to the next level.')}
+              text={cta.title}
+              subtitle={cta.subtitle}
               align="center"
               className="text-white mb-8"
             />
 
             <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => {
-                    const link = document.createElement('a');
-                    link.href = '/download/kanak_retail.pdf';
-                    link.download = 'kanakretail.pdf';
-                    link.click();
-                  }}
-                  className="bg-white text-teal-600 px-8 py-4 rounded-full font-semibold text-lg flex items-center space-x-2 mx-auto hover:shadow-lg transition-all duration-300"
-                >
-                  <span>{t('home.cta.button', 'Explore Our Product')}</span>
-                  <ArrowRight className="w-5 h-5" />
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => {
+                const link = document.createElement('a');
+                link.href = cta.downloadUrl;
+                link.download = 'kanakretail.pdf';
+                link.click();
+              }}
+              className="bg-white text-teal-600 px-8 py-4 rounded-full font-semibold text-lg flex items-center space-x-2 mx-auto hover:shadow-lg transition-all duration-300"
+            >
+              <span>{cta.button}</span>
+              <ArrowRight className="w-5 h-5" />
             </motion.button>
-
           </motion.div>
         </div>
       </section>

@@ -3,89 +3,16 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { useTranslation } from "react-i18next";
-import dynamic from 'next/dynamic';
-const Title = dynamic(() => import('@/components/common/Title/Title'));
-const Paragraph = dynamic(() => import('@/components/common/Paragraph/Paragraph'));
+import dynamic from "next/dynamic";
+import { useProducts } from "@/hooks/Products/useProducts";
 
-interface Product {
-  image: string;
-  title: string;
-  description: string;
-  features: string[];
-  price: string;
-}
+const Title = dynamic(() => import("@/components/common/Title/Title"));
+const Paragraph = dynamic(() => import("@/components/common/Paragraph/Paragraph"));
 
 const Products: React.FC = () => {
-  const { t } = useTranslation("products");
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const { products, t } = useProducts();
+  const [selectedProduct, setSelectedProduct] = useState<typeof products[0] | null>(null);
   const [visibleCount, setVisibleCount] = useState(4);
-
-  const products: Product[] = [
-    {
-      image: "/images/millets.webp",
-      title: t("grains.title"),
-      description: t("grains.description"),
-      features: t("grains.features", { returnObjects: true }) as string[],
-      price: t("grains.price"),
-    },
-    {
-      image: "/images/spices.webp",
-      title: t("spices.title"),
-      description: t("spices.description"),
-      features: t("spices.features", { returnObjects: true }) as string[],
-      price: t("spices.price"),
-    },
-    {
-      image: "/images/millets.webp",
-      title: t("rawMillet.title"),
-      description: t("rawMillet.description"),
-      features: t("rawMillet.features", { returnObjects: true }) as string[],
-      price: t("rawMillet.price"),
-    },
-    {
-      image: "/images/millets.webp",
-      title: t("pulsesBeans.title"),
-      description: t("pulsesBeans.description"),
-      features: t("pulsesBeans.features", { returnObjects: true }) as string[],
-      price: t("pulsesBeans.price"),
-    },
-    {
-      image: "/images/dryfrouts.webp",
-      title: t("dryFruits.title"),
-      description: t("dryFruits.description"),
-      features: t("dryFruits.features", { returnObjects: true }) as string[],
-      price: t("dryFruits.price"),
-    },
-    {
-      image: "/images/flours.webp",
-      title: t("flours.title"),
-      description: t("flours.description"),
-      features: t("flours.features", { returnObjects: true }) as string[],
-      price: t("flours.price"),
-    },
-    {
-      image: "/images/vermicelli.webp",
-      title: t("vermicelli.title"),
-      description: t("vermicelli.description"),
-      features: t("vermicelli.features", { returnObjects: true }) as string[],
-      price: t("vermicelli.price"),
-    },
-    {
-      image: "/images/suger.webp",
-      title: t("sugar.title"),
-      description: t("sugar.description"),
-      features: t("sugar.features", { returnObjects: true }) as string[],
-      price: t("sugar.price"),
-    },
-    {
-      image: "/images/aplam.webp",
-      title: t("others.title"),
-      description: t("others.description"),
-      features: t("others.features", { returnObjects: true }) as string[],
-      price: t("others.price"),
-    },
-  ];
 
   return (
     <div className="pt-16 dark:bg-gray-900 transition-colors">
@@ -98,6 +25,7 @@ const Products: React.FC = () => {
             align="center"
             className="mb-16"
           />
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.slice(0, visibleCount).map((product, index) => (
               <motion.div
@@ -117,17 +45,12 @@ const Products: React.FC = () => {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-
-                <Title
-                  text={product.title}
-                  as="h2"
-                  align="center"
-                  className="mb-3"
-                />
+                <Title text={product.title} as="h2" align="center" className="mb-3" />
                 <Paragraph text={product.description} className="text-center" />
               </motion.div>
             ))}
           </div>
+
           {visibleCount < products.length && (
             <div className="text-center mt-10">
               <motion.button
@@ -142,6 +65,7 @@ const Products: React.FC = () => {
           )}
         </div>
       </section>
+
       <AnimatePresence>
         {selectedProduct && (
           <motion.div
@@ -178,12 +102,7 @@ const Products: React.FC = () => {
                 </div>
 
                 <div className="w-full md:w-1/2">
-                  <Title
-                    text={selectedProduct.title}
-                    as="h2"
-                    align="left"
-                    className="mb-3"
-                  />
+                  <Title text={selectedProduct.title} as="h2" align="left" className="mb-3" />
                   <Paragraph text={selectedProduct.description} className="mb-4" />
 
                   <Title

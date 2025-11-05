@@ -4,71 +4,14 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Linkedin, Twitter, Mail } from "lucide-react";
-import { useTranslation } from "react-i18next";
 import dynamic from "next/dynamic";
+import { useTeamMembers } from "@/hooks/Teams/useTeamMembers";
 
 const Title = dynamic(() => import("@/components/common/Title/Title"));
 const Paragraph = dynamic(() => import("@/components/common/Paragraph/Paragraph"));
 
-interface TeamMember {
-  name: string;
-  role: string;
-  bio: string;
-  image: string;
-  social: {
-    linkedin: string;
-    twitter: string;
-    email: string;
-  };
-}
-
 const Teams: React.FC = () => {
-  const { t } = useTranslation("teams");
-
-  const teamMembers: TeamMember[] = [
-    {
-      name: t("members.sarah.name"),
-      role: t("members.sarah.role"),
-      bio: t("members.sarah.bio"),
-      image: "/teams/gopal.webp",
-      social: t("members.sarah.social", { returnObjects: true }) as TeamMember["social"],
-    },
-    {
-      name: t("members.michael.name"),
-      role: t("members.michael.role"),
-      bio: t("members.michael.bio"),
-      image: "/teams/sunita.webp",
-      social: t("members.michael.social", { returnObjects: true }) as TeamMember["social"],
-    },
-    {
-      name: t("members.emily.name"),
-      role: t("members.emily.role"),
-      bio: t("members.emily.bio"),
-      image: "/teams/veera.webp",
-      social: t("members.emily.social", { returnObjects: true }) as TeamMember["social"],
-    },
-    {
-      name: t("members.david.name"),
-      role: t("members.david.role"),
-      bio: t("members.david.bio"),
-      image: "/kanak.jpg",
-      social: t("members.david.social", { returnObjects: true }) as TeamMember["social"],
-    },
-    {
-      name: t("members.lisa.name"),
-      role: t("members.lisa.role"),
-      bio: t("members.lisa.bio"),
-      image: "/kanak.jpg",
-      social: t("members.lisa.social", { returnObjects: true }) as TeamMember["social"],
-    },
-    {
-      name: t("members.james.name"),
-      role: t("members.james.role"),
-      bio: t("members.james.bio"),
-      image: "/kanak.jpg",
-      social: t("members.james.social", { returnObjects: true }) as TeamMember["social"],
-    },
-  ];
+  const { teamMembers, t } = useTeamMembers();
 
   return (
     <div className="pt-16">
@@ -97,7 +40,7 @@ const Teams: React.FC = () => {
                     alt={`${member.name} - ${member.role}`}
                     width={128}
                     height={128}
-                    priority={index < 2} // load top 2 faster
+                    priority={index < 2}
                     className="rounded-full object-cover border-4 border-white dark:border-gray-800 shadow-lg group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
@@ -113,9 +56,9 @@ const Teams: React.FC = () => {
                   {Object.entries(member.social).map(([key, value]) => (
                     <motion.a
                       key={key}
-                      href={key === "email" ? `mailto:${value}` : value}
-                      target={key !== "email" ? "_blank" : undefined}
-                      rel={key !== "email" ? "noopener noreferrer" : undefined}
+                      href={typeof value === "string" ? (key === "email" ? `mailto:${value}` : value) : undefined}
+                      target={typeof value === "string" && key !== "email" ? "_blank" : undefined}
+                      rel={typeof value === "string" && key !== "email" ? "noopener noreferrer" : undefined}
                       whileHover={{ scale: 1.1 }}
                       className="w-10 h-10 bg-gradient-to-r from-teal-600 to-cyan-500 rounded-full flex items-center justify-center text-white hover:shadow-lg transition-all duration-300"
                     >

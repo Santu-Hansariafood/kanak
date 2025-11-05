@@ -1,51 +1,19 @@
 'use client';
 import "@/lib/i18n/client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Globe } from "lucide-react";
-import { useTranslation } from "react-i18next";
 import Image from "next/image";
 
+import { useLanguage } from "@/hooks/Header/useLanguage";
+import { useNavigation } from "@/hooks/Header/useNavigation";
+import { useMenu } from "@/hooks/Header/useMenu";
+
 const Header = () => {
-  const { t, i18n } = useTranslation();
-  const [isOpen, setIsOpen] = useState(false);
-  const [showLangMenu, setShowLangMenu] = useState(false);
-  const [mounted, setMounted] = useState(false);
-  const pathname = usePathname();
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const languages = [
-    { code: "en", name: "English" },
-    { code: "hi", name: "हिन्दी" },
-    { code: "ta", name: "தமிழ்" },
-    { code: "bn", name: "বাংলা" },
-    { code: "te", name: "తెలుగు" },
-  ];
-
-  const currentLanguage =
-    languages.find((lang) => lang.code === i18n.language) || languages[0];
-
-  const changeLanguage = (langCode: string) => {
-    i18n.changeLanguage(langCode);
-    if (typeof window !== "undefined") {
-      localStorage.setItem("i18nextLng", langCode);
-    }
-    setShowLangMenu(false);
-  };
-
-  const navItems = [
-    { name: t("nav.home"), path: "/" },
-    { name: t("nav.about"), path: "/about" },
-    { name: t("nav.products"), path: "/products" },
-    { name: t("nav.teams"), path: "/teams" },
-    { name: t("nav.locations"), path: "/locations" },
-    { name: t("nav.blog"), path: "/blog" },
-  ];
+  const { t, i18n, languages, currentLanguage, showLangMenu, setShowLangMenu, mounted, changeLanguage } = useLanguage();
+  const { pathname, navItems } = useNavigation();
+  const { isOpen, setIsOpen, toggleMenu } = useMenu();
 
   if (!mounted) return null;
 
@@ -58,6 +26,7 @@ const Header = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
+          {/* Logo */}
           <Link href="/" className="flex items-center space-x-3">
             <div className="relative h-12 w-12 sm:h-14 sm:w-14 rounded-full overflow-hidden border-2 border-teal-600 bg-white shadow-md">
               <Image
@@ -71,6 +40,7 @@ const Header = () => {
             </div>
           </Link>
 
+          {/* Desktop Nav */}
           <div className="hidden md:flex items-center space-x-2">
             {navItems.map((item) => (
               <Link
@@ -91,6 +61,8 @@ const Header = () => {
                 )}
               </Link>
             ))}
+
+            {/* Language Selector */}
             <div className="relative ml-4">
               <button
                 onClick={() => setShowLangMenu(!showLangMenu)}
@@ -128,9 +100,11 @@ const Header = () => {
               </AnimatePresence>
             </div>
           </div>
+
+          {/* Mobile Menu Button */}
           <button
             className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={toggleMenu}
           >
             {isOpen ? (
               <X className="w-6 h-6 text-teal-700" />
@@ -140,6 +114,8 @@ const Header = () => {
           </button>
         </div>
       </div>
+
+      {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
