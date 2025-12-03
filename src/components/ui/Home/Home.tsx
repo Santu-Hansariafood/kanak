@@ -16,10 +16,8 @@ const Home = () => {
 
   return (
     <div className="overflow-hidden relative">
-      {/* Hero Section */}
       <Carousel />
 
-      {/* Features Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <Title
@@ -53,7 +51,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-teal-600 to-cyan-500">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div

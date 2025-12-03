@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, ArrowUp } from "lucide-react";
 import Modal from "@/components/common/Model/Model";
 import { useFooter } from "@/hooks/Footer/useFooter";
+import Link from "next/link";
 
 const Footer = () => {
   const {
@@ -26,7 +27,6 @@ const Footer = () => {
       <div className="absolute inset-0 backdrop-blur-[1px] bg-gradient-to-b from-transparent via-slate-900/30 to-slate-900/60" />
 
       <div className="relative max-w-7xl mx-auto px-6 py-20">
-        {/* Company Info */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 mb-16">
           <div className="lg:col-span-2 space-y-6">
             <motion.div
@@ -59,7 +59,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Footer Links */}
           {[
             ["company", t("company")],
             ["services", t("services")],
@@ -86,12 +85,12 @@ const Footer = () => {
                         {link.name}
                       </button>
                     ) : (
-                      <a
+                      <Link
                         href={link.href}
                         className="text-gray-400 hover:text-teal-400 transition-all duration-200 hover:translate-x-1 inline-block"
                       >
                         {link.name}
-                      </a>
+                      </Link>
                     )}
                   </li>
                 ))}
@@ -100,7 +99,6 @@ const Footer = () => {
           ))}
         </div>
 
-        {/* Bottom Section */}
         <div className="border-t border-gray-800/50 pt-10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-400 text-sm">
             © {new Date().getFullYear()} {t("company_name")}. {t("copyright")}
@@ -108,20 +106,19 @@ const Footer = () => {
 
           <div className="flex space-x-4">
             {socialLinks.map(({ icon: Icon, href, label }, index) => (
-              <a
+              <Link
                 key={index}
                 href={href}
                 aria-label={label}
                 className="w-10 h-10 flex items-center justify-center rounded-full bg-slate-700 hover:bg-teal-600 transition"
               >
                 <Icon className="w-5 h-5 text-gray-300" />
-              </a>
+              </Link>
             ))}
           </div>
         </div>
       </div>
 
-      {/* Scroll to Top Button */}
       <motion.button
         onClick={scrollToTop}
         className="fixed bottom-8 right-8 z-50 group"
@@ -134,7 +131,6 @@ const Footer = () => {
         </div>
       </motion.button>
 
-      {/* Modals */}
       <Modal
         isOpen={isServicesModalOpen}
         onClose={() => setIsServicesModalOpen(false)}

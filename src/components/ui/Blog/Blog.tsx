@@ -17,10 +17,8 @@ const Blog = () => {
     <div className="pt-16">
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          {/* Title + Subtitle */}
           <Title text={t("title")} subtitle={t("subtitle")} />
 
-          {/* Featured Post */}
           {featuredPost && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -90,7 +88,6 @@ const Blog = () => {
             </motion.div>
           )}
 
-          {/* Regular Posts */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {regularPosts.map((post, index) => (
               <motion.article
