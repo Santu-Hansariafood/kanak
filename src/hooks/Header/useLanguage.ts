@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 export const useLanguage = () => {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [showLangMenu, setShowLangMenu] = useState(false);
   const [mounted, setMounted] = useState(false);
 
@@ -22,13 +22,16 @@ export const useLanguage = () => {
 
   const changeLanguage = (langCode: string) => {
     i18n.changeLanguage(langCode);
+
     if (typeof window !== "undefined") {
       localStorage.setItem("i18nextLng", langCode);
     }
+
     setShowLangMenu(false);
   };
 
   return {
+    t,
     i18n,
     languages,
     currentLanguage,

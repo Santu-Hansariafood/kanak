@@ -21,21 +21,29 @@ const namespaces = [
 type Language = (typeof languages)[number];
 type Namespace = (typeof namespaces)[number];
 
-type ResourceStructure = Record<Language, Record<Namespace, Record<string, unknown>>>;
+type ResourceStructure = Record<
+  Language,
+  Record<Namespace, Record<string, unknown>>
+>;
 
-const resources: ResourceStructure = await languages.reduce(async (accPromise, lang) => {
-  const acc = await accPromise;
-  acc[lang] = await namespaces.reduce(async (nsAccPromise, ns) => {
-    const nsAcc = await nsAccPromise;
-    try {
-      nsAcc[ns] = (await import(`../locales/${lang}/${ns}.json`)).default;
-    } catch (err) {
-      console.warn(`Missing translation file: ${lang}/${ns}.json`, err);
-    }
-    return nsAcc;
-  }, Promise.resolve({} as Record<Namespace, Record<string, unknown>>));
-  return acc;
-}, Promise.resolve({} as ResourceStructure));
+const resources: ResourceStructure = await languages.reduce(
+  async (accPromise, lang) => {
+    const acc = await accPromise;
+
+    acc[lang] = await namespaces.reduce(async (nsAccPromise, ns) => {
+      const nsAcc = await nsAccPromise;
+      try {
+        nsAcc[ns] = (await import(`../locales/${lang}/${ns}.json`)).default;
+      } catch (err) {
+        console.warn(`Missing translation file: ${lang}/${ns}.json`, err);
+      }
+      return nsAcc;
+    }, Promise.resolve({} as Record<Namespace, Record<string, unknown>>));
+
+    return acc;
+  },
+  Promise.resolve({} as ResourceStructure)
+);
 
 if (!i18n.isInitialized) {
   i18n
@@ -56,5 +64,7 @@ if (!i18n.isInitialized) {
       react: { useSuspense: false },
     });
 }
+
+export const t = i18n.t.bind(i18n);
 
 export default i18n;
