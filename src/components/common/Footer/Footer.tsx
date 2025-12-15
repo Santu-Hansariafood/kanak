@@ -1,6 +1,6 @@
 "use client";
 import "@/lib/i18n/client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, ArrowUp } from "lucide-react";
 import Modal from "@/components/common/Model/Model";
@@ -19,6 +19,24 @@ const Footer = () => {
     handleLinkClick,
     scrollToTop,
   } = useFooter();
+
+  const [mounted, setMounted] = useState(false);
+  const [year, setYear] = useState<number | null>(null);
+
+  useEffect(() => {
+    setMounted(true);
+    setYear(new Date().getFullYear());
+  }, []);
+
+  if (!mounted) {
+    return (
+      <footer className="bg-slate-900 py-20">
+        <div className="max-w-7xl mx-auto px-6 opacity-0">
+          Kanak Retail
+        </div>
+      </footer>
+    );
+  }
 
   return (
     <footer className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -101,7 +119,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800/50 pt-10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} {t("company_name")}. {t("copyright")}
+            © {year} {t("company_name")}. {t("copyright")}
           </p>
 
           <div className="flex space-x-4">
