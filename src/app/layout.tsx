@@ -1,13 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
-import dynamic from "next/dynamic";
-
-const Header = dynamic(() => import("@/components/common/Header/Header"));
-const Footer = dynamic(() => import("@/components/common/Footer/Footer"));
-const I18nProviderWrapper = dynamic(
-  () => import("@/components/I18nProviderWrapper/I18nProviderWrapper")
-);
 
 const inter = Inter({
   variable: "--font-inter",
@@ -194,14 +187,7 @@ export default function RootLayout({
       </head>
 
       <body className={`${inter.variable} ${robotoMono.variable} antialiased`}>
-        <Header />
-        <I18nProviderWrapper>{children}</I18nProviderWrapper>
-        <Footer />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `console.log("%cDeveloped by Santu De 🧠 – Next.js & React Developer | https://kanakretail.com", "color: teal; font-size:14px;");`,
-          }}
-        />
+        {children}
       </body>
     </html>
   );
