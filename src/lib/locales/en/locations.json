@@ -7,29 +7,29 @@
     "corporate": {
       "title": "Corporate Office",
       "address": "Primarc Square 6th Floor, Plot No.1, Salt Lake Bypass, LA Block, Sector: 3, Bidhannagar, Kolkata, West Bengal 700098",
-      "phone": "+91-XXXXXXXXXX",
-      "email": "info@hansariafoods.com",
+      "phone": "+91-83369-24060",
+      "email": "info@hansariafood.com",
       "hours": "Mon - Sat: 10:00 AM - 7:00 PM"
     },
     "register": {
       "title": "Register Office",
       "address": "207, Maharshi Debendra Rd, Room no - 111, 6th Floor, Burra Bazar, Kolkata, West Bengal 700007, India",
-      "phone": "+91-XXXXXXXXXX",
-      "email": "register@hansariafoods.com",
+      "phone": "+91-83369-24060",
+      "email": "info@hansariafood.com",
       "hours": "Mon - Sat: 10:00 AM - 7:00 PM"
     },
     "chennai": {
       "title": "Chennai Office",
       "address": "G5, Mahalakshmi Flats, 26 Tank Bund Road, Nungambakkam, Chennai 600034",
-      "phone": "+91-XXXXXXXXXX",
-      "email": "chennai@hansariafoods.com",
+      "phone": "+91-83369-24060",
+      "email": "sales@kanakretail.com",
       "hours": "Mon - Sat: 10:00 AM - 7:00 PM"
     },
     "pack": {
-      "title": "Pack Office",
+      "title": "Factory",
       "address": "1/612, Kothapulli Village, Reddiyachatram, Dindugal, Tamil Nadu - 624622",
-      "phone": "+91-XXXXXXXXXX",
-      "email": "pack@hansariafoods.com",
+      "phone": "+91-83369-24060",
+      "email": "purchase@kanakretail.com",
       "hours": "Mon - Sat: 10:00 AM - 7:00 PM"
     }
   }

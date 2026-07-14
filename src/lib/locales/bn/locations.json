@@ -7,29 +7,29 @@
     "corporate": {
       "title": "কর্পোরেট অফিস",
       "address": "প্রিমার্ক স্কোয়ার, ৬ষ্ঠ তলা, প্লট নং ১, সল্ট লেক বাইপাস, এলএ ব্লক, সেক্টর: ৩, বিধাননগর, কলকাতা, পশ্চিমবঙ্গ ৭০০০৯৮",
-      "phone": "+91-XXXXXXXXXX",
-      "email": "info@hansariafoods.com",
+      "phone": "+91-83369-24060",
+      "email": "info@hansariafood.com",
       "hours": "সোম - শনি: সকাল 10:00 - সন্ধ্যা 7:00"
     },
     "register": {
       "title": "নিবন্ধিত অফিস",
       "address": "২০৭, মহর্ষি দেবেন্দ্র রোড, রুম নং - ১১১, ৬ষ্ঠ তলা, বুররাবাজার, কলকাতা, পশ্চিমবঙ্গ ৭০০০০৭, ভারত",
-      "phone": "+91-XXXXXXXXXX",
-      "email": "register@hansariafoods.com",
+      "phone": "+91-83369-24060",
+      "email": "info@hansariafood.com",
       "hours": "সোম - শনি: সকাল 10:00 - সন্ধ্যা 7:00"
     },
     "chennai": {
       "title": "চেন্নাই অফিস",
       "address": "জি৫, মহালক্ষ্মী ফ্ল্যাটস, ২৬ ট্যাঙ্ক বুন্ড রোড, নুঙ্গামবাক্কম, চেন্নাই ৬০০০৩৪",
-      "phone": "+91-XXXXXXXXXX",
-      "email": "chennai@hansariafoods.com",
+      "phone": "+91-83369-24060",
+      "email": "sales@kanakretail.com",
       "hours": "সোম - শনি: সকাল 10:00 - সন্ধ্যা 7:00"
     },
     "pack": {
-      "title": "প্যাক অফিস",
+      "title": "কারখানা",
       "address": "১/৬১২, কোঠাপুল্লি গ্রাম, রেডিয়াচত্রাম, ডিন্ডিগুল, তামিলনাড়ু - ৬২৪৬২২",
-      "phone": "+91-XXXXXXXXXX",
-      "email": "pack@hansariafoods.com",
+      "phone": "+91-83369-24060",
+      "email": "purchase@kanakretail.com",
       "hours": "সোম - শনি: সকাল 10:00 - সন্ধ্যা 7:00"
     }
   }
