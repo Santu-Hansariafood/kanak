@@ -38,27 +38,6 @@ export const useTeamMembers = () => {
       image: "/teams/veera.webp",
       social: t("members.emily.social", { returnObjects: true }) as TeamMember["social"],
     },
-    {
-      name: t("members.david.name"),
-      role: t("members.david.role"),
-      bio: t("members.david.bio"),
-      image: "/kanak.jpg",
-      social: t("members.david.social", { returnObjects: true }) as TeamMember["social"],
-    },
-    {
-      name: t("members.lisa.name"),
-      role: t("members.lisa.role"),
-      bio: t("members.lisa.bio"),
-      image: "/kanak.jpg",
-      social: t("members.lisa.social", { returnObjects: true }) as TeamMember["social"],
-    },
-    {
-      name: t("members.james.name"),
-      role: t("members.james.role"),
-      bio: t("members.james.bio"),
-      image: "/kanak.jpg",
-      social: t("members.james.social", { returnObjects: true }) as TeamMember["social"],
-    },
   ];
 
   return { teamMembers, t };

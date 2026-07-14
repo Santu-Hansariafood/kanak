@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 interface TitleProps {
   text: string;
-  as?: 'h1' | 'h2';
+  as?: 'h1' | 'h2' | 'h3';
   subtitle?: string;
   align?: 'center' | 'left';
   className?: string;
@@ -29,7 +29,7 @@ const Title: React.FC<TitleProps> = ({
       <HeadingTag
         className={`
           font-bold tracking-tight 
-          ${as === 'h1' ? 'text-4xl sm:text-5xl lg:text-6xl' : 'text-2xl sm:text-3xl lg:text-4xl'}
+          ${as === 'h1' ? 'text-4xl sm:text-5xl lg:text-6xl' : as === 'h2' ? 'text-2xl sm:text-3xl lg:text-4xl' : 'text-xl sm:text-2xl lg:text-3xl'}
           text-gray-900 dark:text-gray-100
         `}
       >

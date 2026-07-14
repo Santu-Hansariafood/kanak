@@ -8,6 +8,7 @@ const Footer = dynamic(() => import("@/components/common/Footer/Footer"));
 const I18nProviderWrapper = dynamic(
   () => import("@/components/I18nProviderWrapper/I18nProviderWrapper")
 );
+const Preloader = dynamic(() => import("@/components/common/Preloader/Preloader"));
 
 const inter = Inter({
   variable: "--font-inter",
@@ -194,14 +195,11 @@ export default function RootLayout({
       </head>
 
       <body className={`${inter.variable} ${robotoMono.variable} antialiased`}>
-        <Header />
-        <I18nProviderWrapper>{children}</I18nProviderWrapper>
-        <Footer />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `console.log("%cDeveloped by Santu De 🧠 – Next.js & React Developer | https://kanakretail.com", "color: teal; font-size:14px;");`,
-          }}
-        />
+        <Preloader>
+          <Header />
+          <I18nProviderWrapper>{children}</I18nProviderWrapper>
+          <Footer />
+        </Preloader>
       </body>
     </html>
   );

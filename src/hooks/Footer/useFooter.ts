@@ -46,10 +46,10 @@ export const useFooter = () => {
   };
 
   const socialLinks = [
-    { icon: Facebook, href: "https://facebook.com", label: t("social_facebook") },
+    { icon: Facebook, href: "https://www.facebook.com/kanakretail/", label: t("social_facebook") },
     { icon: Twitter, href: "https://twitter.com", label: t("social_twitter") },
-    { icon: Linkedin, href: "https://linkedin.com", label: t("social_linkedin") },
-    { icon: Instagram, href: "https://instagram.com", label: t("social_instagram") },
+    { icon: Linkedin, href: "https://www.linkedin.com/company/hansaria-food-pvt-ltd", label: t("social_linkedin") },
+    { icon: Instagram, href: "https://instagram.com//kanak_retail", label: t("social_instagram") },
   ];
 
   return {
