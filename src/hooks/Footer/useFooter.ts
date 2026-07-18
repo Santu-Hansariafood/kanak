@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Facebook, Youtube, Linkedin, Instagram } from "lucide-react";
 
 export const useFooter = () => {
   const [isServicesModalOpen, setIsServicesModalOpen] = useState(false);
@@ -47,7 +47,7 @@ export const useFooter = () => {
 
   const socialLinks = [
     { icon: Facebook, href: "https://www.facebook.com/kanakretail/", label: t("social_facebook") },
-    { icon: Twitter, href: "https://twitter.com", label: t("social_twitter") },
+    { icon: Youtube, href: "https://www.youtube.com/@KanakRetail", label: t("social_youtube") },
     { icon: Linkedin, href: "https://www.linkedin.com/company/hansaria-food-pvt-ltd", label: t("social_linkedin") },
     { icon: Instagram, href: "https://instagram.com//kanak_retail", label: t("social_instagram") },
   ];
