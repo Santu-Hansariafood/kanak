@@ -46,10 +46,34 @@ export const useFooter = () => {
   };
 
   const socialLinks = [
-    { icon: Facebook, href: "https://www.facebook.com/kanakretail/", label: t("social_facebook") },
-    { icon: Youtube, href: "https://www.youtube.com/@KanakRetail", label: t("social_youtube") },
-    { icon: Linkedin, href: "https://www.linkedin.com/company/hansaria-food-pvt-ltd", label: t("social_linkedin") },
-    { icon: Instagram, href: "https://instagram.com//kanak_retail", label: t("social_instagram") },
+    {
+      icon: Facebook,
+      href: "https://www.facebook.com/kanakretail/",
+      label: t("social_facebook"),
+      target: "_blank",
+      rel: "noopener noreferrer",
+    },
+    {
+      icon: Youtube,
+      href: "https://www.youtube.com/@KanakRetail",
+      label: t("social_youtube"),
+      target: "_blank",
+      rel: "noopener noreferrer",
+    },
+    {
+      icon: Linkedin,
+      href: "https://www.linkedin.com/company/hansaria-food-pvt-ltd",
+      label: t("social_linkedin"),
+      target: "_blank",
+      rel: "noopener noreferrer",
+    },
+    {
+      icon: Instagram,
+      href: "https://instagram.com/kanak_retail",
+      label: t("social_instagram"),
+      target: "_blank",
+      rel: "noopener noreferrer",
+    },
   ];
 
   return {
