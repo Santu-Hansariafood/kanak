@@ -17,14 +17,6 @@ const Products: React.FC = () => {
     (typeof products)[0] | null
   >(null);
   const [visibleCount, setVisibleCount] = useState(6);
-  const [activeCategory, setActiveCategory] = useState("all");
-
-  const categories = ["all", "featured", "popular"];
-
-  const filteredProducts = products.filter((product) => {
-    if (activeCategory === "all") return true;
-    return product.category?.toLowerCase() === activeCategory;
-  });
 
   const handleInquiry = (productTitle: string) => {
     const subject = encodeURIComponent(`Inquiry about ${productTitle}`);
@@ -43,7 +35,7 @@ const Products: React.FC = () => {
       <section className="px-4 relative z-10">
         <div className="max-w-7xl mx-auto">
           {/* Header Section */}
-          <div className="text-center max-w-2xl mx-auto mb-12">
+          <div className="text-center max-w-2xl mx-auto mb-16">
             <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -63,37 +55,13 @@ const Products: React.FC = () => {
             />
           </div>
 
-          {/* Category Filter Tabs */}
-          <div className="flex justify-center items-center gap-2 mb-12 flex-wrap">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 relative ${
-                  activeCategory === cat
-                    ? "text-white shadow-md shadow-teal-500/25"
-                    : "bg-white/80 dark:bg-gray-800/80 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 border border-gray-200/50 dark:border-gray-700/50"
-                }`}
-              >
-                {activeCategory === cat && (
-                  <motion.div
-                    layoutId="activeTab"
-                    className="absolute inset-0 bg-gradient-to-r from-teal-600 to-cyan-500 rounded-full -z-10"
-                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                  />
-                )}
-                {cat.charAt(0).toUpperCase() + cat.slice(1)}
-              </button>
-            ))}
-          </div>
-
           {/* Products Grid */}
           <motion.div
             layout
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             <AnimatePresence>
-              {filteredProducts.slice(0, visibleCount).map((product, index) => (
+              {products.slice(0, visibleCount).map((product, index) => (
                 <motion.div
                   layout
                   key={product.id || index}
@@ -164,12 +132,12 @@ const Products: React.FC = () => {
           </motion.div>
 
           {/* Show More Button */}
-          {visibleCount < filteredProducts.length && (
+          {visibleCount < products.length && (
             <div className="text-center mt-16">
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
-                onClick={() => setVisibleCount(filteredProducts.length)}
+                onClick={() => setVisibleCount(products.length)}
                 className="bg-gradient-to-r from-teal-600 to-cyan-500 text-white px-8 py-4 rounded-2xl font-semibold shadow-lg shadow-teal-500/20 hover:shadow-teal-500/40 transition-all duration-300"
               >
                 {t("showMore") || "Explore All Products"}
