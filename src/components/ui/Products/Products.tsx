@@ -64,7 +64,7 @@ const Products: React.FC = () => {
               {products.slice(0, visibleCount).map((product, index) => (
                 <motion.div
                   layout
-                  key={product.id || index}
+                  key={index}
                   initial={{ opacity: 0, scale: 0.95, y: 20 }}
                   animate={{ opacity: 1, scale: 1, y: 0 }}
                   exit={{ opacity: 0, scale: 0.95 }}
