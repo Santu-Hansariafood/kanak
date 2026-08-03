@@ -2,13 +2,16 @@ import type { Metadata } from "next";
 import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import dynamic from "next/dynamic";
+import StartupAd from "@/components/Ads/StartupAd";
 
 const Header = dynamic(() => import("@/components/common/Header/Header"));
 const Footer = dynamic(() => import("@/components/common/Footer/Footer"));
 const I18nProviderWrapper = dynamic(
-  () => import("@/components/I18nProviderWrapper/I18nProviderWrapper")
+  () => import("@/components/I18nProviderWrapper/I18nProviderWrapper"),
 );
-const Preloader = dynamic(() => import("@/components/common/Preloader/Preloader"));
+const Preloader = dynamic(
+  () => import("@/components/common/Preloader/Preloader"),
+);
 
 const inter = Inter({
   variable: "--font-inter",
@@ -23,7 +26,8 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Kanak Retail – Authentic Indian Spices & Pulses | Premium Quality at Best Price",
+  title:
+    "Kanak Retail – Authentic Indian Spices & Pulses | Premium Quality at Best Price",
   description:
     "Buy authentic Indian spices and pulses online from Kanak Retail. Discover pure turmeric, cumin, moong dal, and garam masala — sourced from trusted farms and packed hygienically.",
   keywords: [
@@ -41,7 +45,9 @@ export const metadata: Metadata = {
     "traditional Indian masala",
     "pure and hygienic food products",
   ],
-  authors: [{ name: "Kanak Retail Developers", url: "https://kanakretail.com" }],
+  authors: [
+    { name: "Kanak Retail Developers", url: "https://kanakretail.com" },
+  ],
   creator: "Kanak Retail Web Team",
   publisher: "Kanak Retail",
   metadataBase: new URL("https://kanakretail.com"),
@@ -89,21 +95,54 @@ export default function RootLayout({
         <meta name="robots" content="index, follow, max-image-preview:large" />
         <meta name="theme-color" content="#7BC043" />
         <meta name="author" content="Kanak Retail Developers" />
-        <meta name="developer" content="Developed by Santu De – Frontend Developer (Next.js, React, Node.js)" />
+        <meta
+          name="developer"
+          content="Developed by Santu De – Frontend Developer (Next.js, React, Node.js)"
+        />
         <meta name="designer" content="Kanak Retail Creative Team" />
         <meta name="language" content="English" />
         <meta name="revisit-after" content="7 days" />
-        <meta name="copyright" content="© 2025 Kanak Retail. All rights reserved." />
+        <meta
+          name="copyright"
+          content="© 2025 Kanak Retail. All rights reserved."
+        />
         <link rel="icon" href="/favicon.ico" />
         <link rel="manifest" href="/icons/site.webmanifest" />
         <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
-        <link rel="icon" type="image/png" sizes="192x192" href="/icons/android-chrome-192x192.png" />
-        <link rel="icon" type="image/png" sizes="512x512" href="/icons/android-chrome-512x512.png" />
-        <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#7BC043" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/icons/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/icons/favicon-16x16.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="192x192"
+          href="/icons/android-chrome-192x192.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="512x512"
+          href="/icons/android-chrome-512x512.png"
+        />
+        <link
+          rel="mask-icon"
+          href="/icons/safari-pinned-tab.svg"
+          color="#7BC043"
+        />
         <meta name="msapplication-TileColor" content="#7BC043" />
-        <meta name="google-site-verification" content="zSN38N5ZBdA-BFgIKoh1_J3nQvv6yep7pwZLh1Slkyc" />
+        <meta
+          name="google-site-verification"
+          content="zSN38N5ZBdA-BFgIKoh1_J3nQvv6yep7pwZLh1Slkyc"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -143,7 +182,8 @@ export default function RootLayout({
                   name: "Kanak Retail",
                   potentialAction: {
                     "@type": "SearchAction",
-                    target: "https://kanakretail.com/search?query={search_term_string}",
+                    target:
+                      "https://kanakretail.com/search?query={search_term_string}",
                     "query-input": "required name=search_term_string",
                   },
                 },
@@ -196,6 +236,7 @@ export default function RootLayout({
 
       <body className={`${inter.variable} ${robotoMono.variable} antialiased`}>
         <Preloader>
+          <StartupAd />
           <Header />
           <I18nProviderWrapper>{children}</I18nProviderWrapper>
           <Footer />

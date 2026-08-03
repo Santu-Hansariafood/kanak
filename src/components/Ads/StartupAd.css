@@ -1,0 +1,49 @@
+.startup-ad-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+    backdrop-filter: blur(4px);
+}
+
+.startup-ad-container {
+    width: 92%;
+    max-width: 900px;
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,.4);
+}
+
+.startup-ad-media {
+    width: 100%;
+    display: block;
+    max-height: 80vh;
+    object-fit: cover;
+}
+
+.startup-ad-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+    background: #111;
+    color: #fff;
+}
+
+.startup-ad-skip {
+    border: none;
+    background: #16a34a;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.startup-ad-skip:hover {
+    background: #15803d;
+}
