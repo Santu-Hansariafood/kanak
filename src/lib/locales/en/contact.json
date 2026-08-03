@@ -1,0 +1,48 @@
+{
+  "badge": "Contact Kanak Retail",
+  "title": "We're here to help with your retail and wholesale needs.",
+  "subtitle": "Reach out for product details, bulk orders, or general enquiries. Our team is ready to respond with quick and friendly support.",
+  "callNow": "Call now",
+  "emailUs": "Email us",
+  "quickContact": "Quick contact",
+  "phoneLabel": "Phone",
+  "emailLabel": "Email",
+  "locationLabel": "Location",
+  "phoneNumber": "+91-83369-24060",
+  "emailAddress": "sales@kanakretail.com",
+  "locationName": "Chennai, Tamil Nadu",
+  "whyChooseUs": {
+    "title": "Why customers choose us",
+    "subtitle": "From everyday pantry essentials to dependable retail support, we focus on quality, trust, and smooth communication.",
+    "items": {
+      "0": {
+        "title": "Fresh and quality-focused products",
+        "description": "Reliable sourcing for homes, stores, and growing businesses."
+      },
+      "1": {
+        "title": "Fast response support",
+        "description": "Get quick answers for orders, pricing, and product availability."
+      },
+      "2": {
+        "title": "Retail-friendly service",
+        "description": "A simple and pleasant experience for both first-time and repeat customers."
+      }
+    }
+  },
+  "form": {
+    "title": "Send us a message",
+    "subtitle": "Share your requirements and we'll get back to you soon with the right support.",
+    "name": "Your name",
+    "phone": "Phone number",
+    "email": "Email address",
+    "message": "Tell us what you need",
+    "submit": "Send enquiry",
+    "success": "Thank you! Your email client should open shortly.",
+    "errors": {
+      "name": "Please enter your name.",
+      "phone": "Please enter your phone number.",
+      "email": "Please enter a valid email address.",
+      "message": "Please tell us what you need."
+    }
+  }
+}

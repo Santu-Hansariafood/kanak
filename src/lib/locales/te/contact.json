@@ -1,0 +1,48 @@
+{
+  "badge": "కనక్ రిటైల్‌ను సంప్రదించండి",
+  "title": "మీ రిటailand మరియు హోల్‌సేల్ అవసరాలకు సహాయం చేయడానికి మేము ఇక్కడ ఉన్నాము.",
+  "subtitle": "ఉత్పత్తి వివరాలు, బల్క్ ఆర్డర్లు లేదా సాధారణ విచారణల కోసం సంప్రదించండి. మా బృందం వేగవంతమైన మరియు స్నేహపూర్వక మద్దతukku సిద్ధంగా ఉంది.",
+  "callNow": "ఇప్పుడే కాల్ చేయండి",
+  "emailUs": "ఇమెయిల్ చేయండి",
+  "quickContact": "త్వరిత సంప్రదింపు",
+  "phoneLabel": "ఫోన్",
+  "emailLabel": "ఇమెయిల్",
+  "locationLabel": "స్థానం",
+  "phoneNumber": "+91-83369-24060",
+  "emailAddress": "sales@kanakretail.com",
+  "locationName": "చennai, తమిళనాడు",
+  "whyChooseUs": {
+    "title": "కస్టమర్లు మమ్మల్ని ఎందuk ఎంచukuntaru",
+    "subtitle": "రోజuvari వంటగది అవసరాల నుండి నమ్మకమైన రిటailand మద్దతu varaku, మేమu quality, trust mariyu smooth communication meeda focus chestamu.",
+    "items": {
+      "0": {
+        "title": "తాజా మరియు నాణ్యత-కేంద్రీకృత ఉత్పత్తులు",
+        "description": "ఇళ్లu, stores mariyu perugutunna businesses kosam reliable sourcing."
+      },
+      "1": {
+        "title": "వేగవంతమైన ప్రతిస్పందన మద్దతu",
+        "description": "orders, pricing mariyu product availability kosam quick answers pondandi."
+      },
+      "2": {
+        "title": "రిటailand-friendly service",
+        "description": "first-time mariyu repeat customers rendu kosam simple mariyu pleasant experience."
+      }
+    }
+  },
+  "form": {
+    "title": "మaku message pampandi",
+    "subtitle": "me requirements share cheyandi, correct support tho meeku tvaraga respond chestamu.",
+    "name": "me peru",
+    "phone": "phone number",
+    "email": "email address",
+    "message": "meeku emi kavalo cheppandi",
+    "submit": "enquiry pampandi",
+    "success": "dhanyavadalu! me email client tvaraga open avutundi.",
+    "errors": {
+      "name": "dayachesi me peru enter cheyandi.",
+      "phone": "dayachesi me phone number enter cheyandi.",
+      "email": "dayachesi valid email address enter cheyandi.",
+      "message": "dayachesi meeku emi kavalo cheppandi."
+    }
+  }
+}

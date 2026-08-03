@@ -16,6 +16,7 @@ const namespaces = [
   "home",
   "carousel",
   "cookie",
+  "contact",
 ] as const;
 
 type Language = (typeof languages)[number];
